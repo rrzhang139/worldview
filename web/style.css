@@ -1,0 +1,341 @@
+:root {
+  --bg: #0e1116;
+  --bg-elev: #161b22;
+  --bg-hover: #1f2630;
+  --border: #2d333b;
+  --text: #d6dde4;
+  --text-dim: #8b949e;
+  --accent: #d4a574;
+  --accent-warn: #f0883e;
+  --pillar-china: #d04545;
+  --pillar-macro: #4a7fb5;
+  --pillar-geo: #c9a659;
+  --pillar-ai: #5fb37c;
+  --mono: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, monospace;
+  --serif: "Iowan Old Style", "Charter", Georgia, serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#sidebar {
+  background: var(--bg-elev);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+#sidebar header {
+  padding: 0 20px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+#sidebar h1 {
+  font-family: var(--mono);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: var(--text);
+}
+
+#sidebar .subtitle {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-top: 4px;
+  text-transform: lowercase;
+}
+
+#sidebar nav {
+  padding: 12px 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: 13px;
+  text-align: left;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.1s, color 0.1s;
+}
+
+.nav-btn:hover { background: var(--bg-hover); color: var(--text); }
+.nav-btn.active { background: var(--bg-hover); color: var(--accent); }
+
+#theme-nav {
+  padding: 16px 12px;
+  flex-grow: 1;
+}
+
+.pillar {
+  margin-bottom: 18px;
+}
+
+.pillar-title {
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--text-dim);
+  padding: 0 12px 6px;
+  border-left: 3px solid var(--border);
+  margin-left: -12px;
+  padding-left: 9px;
+}
+
+.pillar[data-pillar="China"] .pillar-title { border-left-color: var(--pillar-china); }
+.pillar[data-pillar="Macro & Capital"] .pillar-title { border-left-color: var(--pillar-macro); }
+.pillar[data-pillar="Geopolitics"] .pillar-title { border-left-color: var(--pillar-geo); }
+.pillar[data-pillar="AI & Tech"] .pillar-title { border-left-color: var(--pillar-ai); }
+
+.theme-link {
+  display: block;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 14px;
+  text-align: left;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.1s;
+}
+
+.theme-link:hover { background: var(--bg-hover); }
+.theme-link.active { background: var(--bg-hover); color: var(--accent); }
+
+#sidebar footer {
+  padding: 12px 20px;
+  border-top: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+#content {
+  overflow-y: auto;
+  padding: 48px 64px;
+  max-width: 880px;
+  width: 100%;
+}
+
+#content article {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+#content h1 {
+  font-family: var(--mono);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+
+#content h2 {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent);
+  margin-top: 32px;
+  margin-bottom: 12px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+#content h3 {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+
+#content p { margin-bottom: 14px; }
+
+#content ul, #content ol {
+  padding-left: 24px;
+  margin-bottom: 14px;
+}
+
+#content li { margin-bottom: 6px; }
+
+#content code {
+  font-family: var(--mono);
+  font-size: 13px;
+  background: var(--bg-elev);
+  padding: 2px 5px;
+  border-radius: 3px;
+  color: var(--accent);
+}
+
+#content pre {
+  background: var(--bg-elev);
+  padding: 14px;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-bottom: 14px;
+}
+
+#content pre code {
+  background: transparent;
+  padding: 0;
+  color: var(--text);
+}
+
+#content a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--accent);
+}
+
+#content a:hover { color: var(--accent-warn); }
+
+#content blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 16px;
+  color: var(--text-dim);
+  margin: 14px 0;
+  font-style: italic;
+}
+
+#content hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 28px 0;
+}
+
+/* Home view */
+.home-pillars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.home-pillar {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.home-pillar h3 {
+  font-family: var(--mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 12px;
+  color: var(--text-dim);
+}
+
+.home-pillar[data-pillar="China"] h3 { color: var(--pillar-china); }
+.home-pillar[data-pillar="Macro & Capital"] h3 { color: var(--pillar-macro); }
+.home-pillar[data-pillar="Geopolitics"] h3 { color: var(--pillar-geo); }
+.home-pillar[data-pillar="AI & Tech"] h3 { color: var(--pillar-ai); }
+
+.home-pillar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.home-pillar li {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.home-pillar li:last-child { border-bottom: none; }
+
+.home-pillar a {
+  color: var(--text);
+  text-decoration: none;
+  font-family: var(--serif);
+  font-size: 15px;
+  border: none;
+}
+
+.home-pillar a:hover { color: var(--accent); }
+
+.empty-state {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text-dim);
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* Metrics view */
+.metric-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px;
+  margin-bottom: 18px;
+}
+
+.metric-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.metric-name {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.metric-latest {
+  font-family: var(--mono);
+  font-size: 16px;
+  color: var(--accent);
+}
+
+.metric-meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-bottom: 12px;
+}
+
+.metric-chart-wrapper {
+  height: 140px;
+  position: relative;
+}
+
+.warn {
+  color: var(--accent-warn);
+  font-weight: 600;
+}

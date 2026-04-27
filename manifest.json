@@ -1,0 +1,90 @@
+{
+  "themes": [
+    {
+      "id": "ai-compute-capex",
+      "file": "themes/ai-compute-capex.md",
+      "title": "AI Compute & Capex",
+      "pillar": "AI & Tech"
+    },
+    {
+      "id": "ai-models-economics",
+      "file": "themes/ai-models-economics.md",
+      "title": "AI Models & Economics",
+      "pillar": "AI & Tech"
+    },
+    {
+      "id": "capital-markets",
+      "file": "themes/capital-markets.md",
+      "title": "Capital Markets Plumbing",
+      "pillar": "Macro & Capital"
+    },
+    {
+      "id": "china-economy",
+      "file": "themes/china-economy.md",
+      "title": "China Economy",
+      "pillar": "China"
+    },
+    {
+      "id": "china-tech",
+      "file": "themes/china-tech.md",
+      "title": "China Tech",
+      "pillar": "China"
+    },
+    {
+      "id": "commodities",
+      "file": "themes/commodities.md",
+      "title": "Commodities",
+      "pillar": "Macro & Capital"
+    },
+    {
+      "id": "demographics",
+      "file": "themes/demographics.md",
+      "title": "Demographics & Labor",
+      "pillar": "Geopolitics"
+    },
+    {
+      "id": "dollar-reserves",
+      "file": "themes/dollar-reserves.md",
+      "title": "Dollar & Reserve Dynamics",
+      "pillar": "Macro & Capital"
+    },
+    {
+      "id": "energy-systems",
+      "file": "themes/energy-systems.md",
+      "title": "Energy Systems",
+      "pillar": "AI & Tech"
+    },
+    {
+      "id": "geopolitics-conflicts",
+      "file": "themes/geopolitics-conflicts.md",
+      "title": "Geopolitics & Active Conflicts",
+      "pillar": "Geopolitics"
+    },
+    {
+      "id": "industrial-policy-defense",
+      "file": "themes/industrial-policy-defense.md",
+      "title": "Industrial Policy & Defense",
+      "pillar": "Geopolitics"
+    },
+    {
+      "id": "monetary-policy",
+      "file": "themes/monetary-policy.md",
+      "title": "Monetary Policy & Rates Regime",
+      "pillar": "Macro & Capital"
+    },
+    {
+      "id": "semiconductors",
+      "file": "themes/semiconductors.md",
+      "title": "Semiconductors & Supply Chain",
+      "pillar": "AI & Tech"
+    },
+    {
+      "id": "tech-investments",
+      "file": "themes/tech-investments.md",
+      "title": "Tech Strategy & Investments",
+      "pillar": "AI & Tech"
+    }
+  ],
+  "briefs": [],
+  "metrics_file": "metrics/data.json"
+}
