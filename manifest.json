@@ -13,40 +13,16 @@
       "pillar": "AI & Tech"
     },
     {
-      "id": "capital-markets",
-      "file": "themes/capital-markets.md",
-      "title": "Capital Markets Plumbing",
-      "pillar": "Macro & Capital"
-    },
-    {
-      "id": "china-economy",
-      "file": "themes/china-economy.md",
-      "title": "China Economy",
-      "pillar": "China"
+      "id": "ai-policy-regulation",
+      "file": "themes/ai-policy-regulation.md",
+      "title": "AI Policy & Regulation",
+      "pillar": "AI & Tech"
     },
     {
       "id": "china-tech",
       "file": "themes/china-tech.md",
       "title": "China Tech",
       "pillar": "China"
-    },
-    {
-      "id": "commodities",
-      "file": "themes/commodities.md",
-      "title": "Commodities",
-      "pillar": "Macro & Capital"
-    },
-    {
-      "id": "demographics",
-      "file": "themes/demographics.md",
-      "title": "Demographics & Labor",
-      "pillar": "Geopolitics"
-    },
-    {
-      "id": "dollar-reserves",
-      "file": "themes/dollar-reserves.md",
-      "title": "Dollar & Reserve Dynamics",
-      "pillar": "Macro & Capital"
     },
     {
       "id": "energy-systems",
@@ -67,12 +43,6 @@
       "pillar": "Geopolitics"
     },
     {
-      "id": "monetary-policy",
-      "file": "themes/monetary-policy.md",
-      "title": "Monetary Policy & Rates Regime",
-      "pillar": "Macro & Capital"
-    },
-    {
       "id": "semiconductors",
       "file": "themes/semiconductors.md",
       "title": "Semiconductors & Supply Chain",
@@ -85,6 +55,19 @@
       "pillar": "AI & Tech"
     }
   ],
-  "briefs": [],
+  "briefs": [
+    {
+      "id": "2026-W18-brief",
+      "file": "briefs/2026-W18-brief.md",
+      "week": "2026-W18",
+      "date_range": "2026-04-27 to 2026-05-03"
+    },
+    {
+      "id": "2026-W17-brief",
+      "file": "briefs/2026-W17-brief.md",
+      "week": "2026-W17",
+      "date_range": "2026-04-20 to 2026-04-26"
+    }
+  ],
   "metrics_file": "metrics/data.json"
 }

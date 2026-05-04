@@ -339,3 +339,206 @@ body {
   color: var(--accent-warn);
   font-weight: 600;
 }
+
+/* Briefs archive list */
+
+.briefs-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.brief-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.brief-item:last-child { border-bottom: none; }
+
+.brief-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 14px 0;
+  color: var(--text);
+  text-decoration: none;
+  border: none;
+  transition: color 0.1s;
+}
+
+.brief-link:hover { color: var(--accent); }
+
+.brief-week {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 600;
+  color: inherit;
+}
+
+.brief-date {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+/* Per-theme metrics section */
+
+.theme-metrics {
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+/* Add-to-queue on highlight */
+
+#add-btn {
+  position: absolute;
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.4px;
+}
+
+#add-btn:hover { background: var(--accent-warn); }
+
+.toast {
+  position: absolute;
+  transform: translate(-50%, 0) translateY(8px);
+  background: var(--bg-elev);
+  border: 1px solid var(--accent);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  z-index: 1200;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  max-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.toast::before {
+  content: "✓ ";
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.toast-error {
+  border-color: var(--accent-warn);
+}
+
+.toast-error::before {
+  content: "✕ ";
+  color: var(--accent-warn);
+}
+
+.toast-show {
+  opacity: 1;
+  transform: translate(-50%, 0) translateY(0);
+}
+
+/* Glossary term — inline auto-annotation */
+
+.gloss-term {
+  border-bottom: 1px dashed var(--accent);
+  cursor: help;
+  transition: background 0.12s, color 0.12s;
+  padding: 0 1px;
+  border-radius: 2px;
+}
+
+.gloss-term:hover {
+  background: rgba(212, 165, 116, 0.18);
+  color: var(--accent);
+}
+
+/* Definition tooltip (glossary lookup) */
+
+.def-tip {
+  position: absolute;
+  width: 360px;
+  background: #11161d;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+  z-index: 1100;
+  font-family: var(--serif);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.def-tip-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-elev);
+  border-radius: 6px 6px 0 0;
+}
+
+.def-tip-term {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: lowercase;
+  flex-grow: 1;
+}
+
+.def-tip-theme {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: var(--bg);
+  padding: 2px 6px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+}
+
+.def-tip-close {
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 2px;
+}
+
+.def-tip-close:hover { color: var(--text); }
+
+.def-tip-body {
+  padding: 12px;
+}
+
+.def-tip-seealso {
+  padding: 8px 12px;
+  border-top: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+.def-tip-seealso code {
+  font-family: var(--mono);
+  background: var(--bg);
+  color: var(--accent);
+  padding: 1px 5px;
+  border-radius: 3px;
+}

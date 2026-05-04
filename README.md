@@ -8,7 +8,7 @@ A synthesis system for building mental models of macro, geopolitics, AI/tech, an
 
 **Conversationally:** mention a development, Claude appends it to the relevant theme.
 
-**Reading:** run `python3 -m http.server` from this directory, then open `http://localhost:8000/`.
+**Reading:** run `python3 server.py` from this directory, then open `http://localhost:8000/`. Highlight any word/phrase to surface an "Add" button — clicking it logs the term + its surrounding context to `learning-queue.md`. Explanations happen later in chat with Claude, who reads the queue for context priming.
 
 ## Pillars
 

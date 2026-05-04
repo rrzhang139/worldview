@@ -11,26 +11,13 @@ Are frontier model capabilities still scaling smoothly with compute (and post-tr
 ## Why it matters
 The implicit assumption underwriting the entire AI capex cycle is "more compute → better models → more revenue." If that breaks at any point — capability plateau, training cost out of proportion to gain, inference cost not falling fast enough — the investment thesis cracks. Understanding *exactly* what's improving (raw scaling vs. RL post-training vs. inference-time compute vs. tool use vs. agentic loops) is the difference between informed and lost.
 
-## What would change my mind
-- **Scaling-still-works triggers:** next-gen model from a major lab demonstrates step-function on hard benchmarks proportional to compute spend; inference cost per token continuing exponential decline; agent tasks (long-horizon, multi-step) showing reliability gains tied to scale.
-- **Plateau triggers:** flagship next-gen models showing diminishing returns; training cost rising faster than capability; reliance shifting to post-training and tool use rather than base-model scaling; revenue growth at top labs decelerating despite product launches.
+## Mental model
+
+**Scaling laws are religion until they break.**
+
+The empirical observation that more compute → better models has held for 7+ years across multiple labs. The entire AI capex thesis depends on it continuing. **The question every quarter is: are we still on the curve?** When (not if) the curve breaks somewhere, capex stops being rational and starts being overcapacity. Watch flagship next-gen releases (GPT-N+1, Claude N+1, Gemini N+1) as the test. Capability gains *proportional* to compute spend → curve holds. *Sublinear* gains → curve cracking. The market will price this asymmetrically: bullish on continuation, panicky on breakage. **Treat scaling-law continuation as a probability, not a certainty** — and watch for emerging substitutes (RL post-training, inference-time compute, tool use) absorbing the gains when raw scaling stalls.
 
 ## Connections
 - ↔ `ai-compute-capex.md` — model economics is what justifies (or doesn't justify) capex.
 - ↔ `semiconductors.md` — model architecture choices drive HBM/interconnect demand.
 - ↔ `china-tech.md` — China models' position relative to frontier.
-
-## Log
-<!-- One line per development. Format: `- YYYY-MM-DD: [what happened] — [what it updates]` -->
-
-## Open questions
-- What's the true ratio of training compute to inference compute at GPT-class labs?
-- How much capability is coming from scaling vs. RL post-training vs. tool use?
-- What's the quality and fidelity of synthetic data, and is data still a bottleneck?
-
-## Key sources for this theme
-- Dwarkesh Patel podcast (interviews with lab principals)
-- Lab tech reports / system cards (Anthropic, OpenAI, GDM, Meta)
-- Epoch AI quantitative tracking
-- Semianalysis on training cluster economics
-- arXiv preprints (selectively — only when from major labs and the methodology is novel)

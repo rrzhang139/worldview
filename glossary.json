@@ -1,0 +1,372 @@
+{
+  "version": 1,
+  "updated": "2026-04-27",
+  "description": "Permanent term lookup. Read by web/app.js to surface instant definitions on highlight. Claude appends/updates entries when explaining terms in chat.",
+  "entries": {
+    "bond": {
+      "definition": "A loan with paperwork. You give a borrower money now and they promise to pay you a stream of interest payments plus the principal back at the end. The receipt is the bond.",
+      "theme": "capital-markets",
+      "see_also": ["coupon", "yield", "treasury"]
+    },
+    "stock": {
+      "definition": "A slice of ownership in a company. Unlike a bond (a loan), a stock makes you a part-owner; you don't get the money back, but you share in profits forever via dividends or capital gains.",
+      "theme": "capital-markets",
+      "see_also": ["equity", "ipo"]
+    },
+    "equity": {
+      "definition": "Synonym for ownership in a company. 'Equity' is the conceptual word; 'stock' or 'share' is the receipt. Equity claims are residual — they get paid only after debt is paid.",
+      "theme": "capital-markets",
+      "see_also": ["stock", "bond"]
+    },
+    "treasury": {
+      "definition": "A bond issued by the US government. Considered the 'risk-free' asset because the US can print dollars to repay. Maturities run from 1 month to 30 years; their yields anchor every other rate in the dollar system.",
+      "theme": "monetary-policy",
+      "see_also": ["bond", "yield", "10y treasury", "30y treasury"]
+    },
+    "10y treasury": {
+      "definition": "A US government bond with 10 years to maturity. The 'belly' of the curve — the most-watched single rate in the world. When people say 'the 10Y is at 4.30%', they mean its current yield.",
+      "theme": "monetary-policy",
+      "see_also": ["treasury", "yield curve"]
+    },
+    "30y treasury": {
+      "definition": "The longest commonly-issued US government bond. More sensitive to inflation and term-premium changes than shorter bonds because you're locked in for 30 years. Think of it as the long-duration end of the rate spectrum.",
+      "theme": "monetary-policy",
+      "see_also": ["treasury", "duration", "term premium"]
+    },
+    "2y treasury": {
+      "definition": "A US government bond with 2 years to maturity. Tracks Fed expectations closely — when markets price more rate cuts, the 2Y falls; when markets price hikes or higher-for-longer, it rises.",
+      "theme": "monetary-policy",
+      "see_also": ["treasury", "fed", "yield curve"]
+    },
+    "yield": {
+      "definition": "The interest rate you earn on a bond, expressed as a percentage. If a $1000 bond pays $43 a year, its yield is 4.3%. Yields move *inversely* to bond prices — when prices rise, yields fall.",
+      "theme": "monetary-policy",
+      "see_also": ["bond", "treasury"]
+    },
+    "coupon": {
+      "definition": "The periodic interest payment a bond pays its holder, expressed as a percent of face value. A '5% coupon' bond pays $50/year on a $1000 face value. Distinct from *yield* (which depends on the price you paid).",
+      "theme": "capital-markets",
+      "see_also": ["bond", "yield"]
+    },
+    "yield curve": {
+      "definition": "The plot of bond yields by maturity. Normally upward-sloping (longer = more risk = higher yield). Its shape is a real-time poll on the economy: steep means growth optimism, flat means uncertainty, inverted means recession expected.",
+      "theme": "monetary-policy",
+      "see_also": ["yield curve inversion", "bear-flattening", "bull-flattening"]
+    },
+    "yield curve inversion": {
+      "definition": "When short-term yields exceed long-term yields — abnormal because you're paid less for locking up money longer. Happens because markets expect rate cuts soon (recession). Has preceded most US recessions.",
+      "theme": "monetary-policy",
+      "see_also": ["yield curve", "bear-flattening"]
+    },
+    "bear-flattening": {
+      "definition": "Curve flattening driven by the *short end rising* (e.g., inflation expectations or hawkish Fed pushing 2Y yields up). The 'bear' part: rising yields are bad for bondholders. Distinct from bull-flattening (driven by long end falling on growth fears).",
+      "theme": "monetary-policy",
+      "see_also": ["yield curve", "bull-flattening"]
+    },
+    "bull-flattening": {
+      "definition": "Curve flattening driven by the *long end falling* (e.g., 10Y yields drop on growth fears or recession expectations). The 'bull' part: falling yields are good for existing bondholders. Opposite driver of bear-flattening despite same shape.",
+      "theme": "monetary-policy",
+      "see_also": ["yield curve", "bear-flattening"]
+    },
+    "duration": {
+      "definition": "How sensitive a bond's price is to a change in interest rates. A 30Y has high duration; a 2Y has low duration. By extension, 'long-duration assets' (tech stocks, real estate) get hit hardest when rates rise.",
+      "theme": "monetary-policy",
+      "see_also": ["bond", "30y treasury", "discount rate"]
+    },
+    "term premium": {
+      "definition": "The extra yield investors demand for holding longer-dated bonds, beyond just expected average short rates. It's the price of *not knowing* what'll happen over 10–30 years — inflation surprises, policy shocks, supply changes.",
+      "theme": "monetary-policy",
+      "see_also": ["yield curve", "duration"]
+    },
+    "real yield": {
+      "definition": "Bond yield minus inflation expectations. The actual purchasing power growth your bond gives you. Nominal yield can be 4% but if inflation is 5%, real yield is -1% — you're losing real money.",
+      "theme": "monetary-policy",
+      "see_also": ["nominal yield", "tips", "breakevens"]
+    },
+    "nominal yield": {
+      "definition": "The headline interest rate on a bond, before adjusting for inflation. If a Treasury yields 4.30%, that's nominal. Doesn't tell you what your purchasing power actually grows by.",
+      "theme": "monetary-policy",
+      "see_also": ["real yield", "breakevens"]
+    },
+    "tips": {
+      "definition": "Treasury Inflation-Protected Securities. Bonds whose principal adjusts with inflation, so they pay a *real* yield directly. Useful as the market's read on real interest rates separate from inflation.",
+      "theme": "monetary-policy",
+      "see_also": ["real yield", "breakevens"]
+    },
+    "breakevens": {
+      "definition": "Inflation breakevens = nominal Treasury yield minus TIPS yield. The market's implied inflation expectation over that maturity. If 10Y breakeven is 2.5%, the market thinks average inflation will run 2.5% over 10 years.",
+      "theme": "monetary-policy",
+      "see_also": ["tips", "real yield"]
+    },
+    "inflation compensation": {
+      "definition": "Same idea as breakevens — the part of nominal bond yields that's compensating you for expected inflation. When 'the 2Y rose on inflation compensation,' it means the rise was driven by inflation expectations, not real-rate changes.",
+      "theme": "monetary-policy",
+      "see_also": ["breakevens", "real yield"]
+    },
+    "credit spread": {
+      "definition": "The extra yield a corporate (or any non-government) bond pays above the equivalent Treasury, compensating for default risk. MSFT 10Y at 4.80% vs. Treasury 10Y at 4.30% = 50bp credit spread. Widens in stress, tightens in calm.",
+      "theme": "capital-markets",
+      "see_also": ["bond", "credit market"]
+    },
+    "credit market": {
+      "definition": "The bond market, especially for non-government borrowers (corporates, financials, sovereigns ex-US). 'Credit' here just means 'debt/lending.' Investment grade (IG) and high yield (HY) are the two main tiers.",
+      "theme": "capital-markets",
+      "see_also": ["credit spread", "bond"]
+    },
+    "basis points": {
+      "definition": "A unit equal to 0.01% (one hundredth of a percentage point). 'Spreads widened by 50 bps' = spreads rose by 0.5 percentage points. Used because rate moves are often small in absolute terms.",
+      "theme": "capital-markets",
+      "see_also": ["credit spread"]
+    },
+    "discount rate": {
+      "definition": "The rate you use to value future cash flows in today's dollars. Roughly: real yield + risk premium for the asset. When real yields rise, discount rate rises, and *every long-duration asset gets cheaper* (tech stocks, real estate, bonds).",
+      "theme": "capital-markets",
+      "see_also": ["real yield", "duration"]
+    },
+    "free cash flow": {
+      "definition": "FCF = cash from operations minus capex. The cash a company actually generates after maintaining itself. Negative FCF means the business is consuming cash; sustainable only with external funding (debt or equity issuance).",
+      "theme": "tech-investments",
+      "see_also": ["capex", "ai-compute-capex"]
+    },
+    "capex": {
+      "definition": "Capital expenditure. Money spent on long-lived physical assets — factories, machinery, GPUs, data centers, fiber. Distinct from OpEx (day-to-day costs). The 'AI capex cycle' is hyperscalers spending hundreds of billions on AI infrastructure.",
+      "theme": "ai-compute-capex",
+      "see_also": ["opex", "free cash flow", "hyperscaler"]
+    },
+    "opex": {
+      "definition": "Operating expenses. Day-to-day costs to run a business — salaries, electricity, rent. Recurring; appears on the income statement, not the balance sheet (unlike capex, which becomes a depreciable asset).",
+      "theme": "tech-investments",
+      "see_also": ["capex"]
+    },
+    "hyperscaler": {
+      "definition": "The handful of cloud-computing giants operating at planetary scale: Microsoft (Azure), Google (GCP), Amazon (AWS), Meta, and increasingly Oracle. Together they're spending ~$700B in 2026 capex, ~75% of which is AI-specific.",
+      "theme": "ai-compute-capex",
+      "see_also": ["capex", "ai-compute-capex"]
+    },
+    "fed": {
+      "definition": "The Federal Reserve, the US central bank. Sets the federal funds rate (the overnight bank lending rate), which propagates through every other interest rate in the dollar system. The FOMC is its rate-setting committee.",
+      "theme": "monetary-policy",
+      "see_also": ["fomc", "monetary policy"]
+    },
+    "fomc": {
+      "definition": "Federal Open Market Committee. The 12-member Fed body that sets the federal funds rate at 8 meetings per year. Its statements, press conferences, and minutes move bond markets globally.",
+      "theme": "monetary-policy",
+      "see_also": ["fed", "sep"]
+    },
+    "sep": {
+      "definition": "Summary of Economic Projections. Quarterly forecasts each FOMC member submits — for GDP, inflation, unemployment, and the funds rate. The 'dot plot' showing each member's rate forecast comes from this.",
+      "theme": "monetary-policy",
+      "see_also": ["fomc", "fed"]
+    },
+    "dxy": {
+      "definition": "The US Dollar Index. A trade-weighted measure of the dollar against six major currencies (mostly EUR, JPY, GBP). DXY at 100 was a baseline; ~98.5 today means the dollar is slightly weaker than that benchmark.",
+      "theme": "dollar-reserves",
+      "see_also": ["dollar", "reserve currency"]
+    },
+    "reserve currency": {
+      "definition": "A currency that other countries hold as foreign-exchange reserves and use for international trade. The USD is the dominant reserve currency (~58% of allocated reserves), giving the US 'exorbitant privilege.'",
+      "theme": "dollar-reserves",
+      "see_also": ["dxy", "exorbitant privilege", "petrodollar"]
+    },
+    "exorbitant privilege": {
+      "definition": "Coined by French finance minister Giscard d'Estaing in 1965. Because the world demands USD reserves and Treasuries, the US can run persistent fiscal and trade deficits at lower borrowing costs than any other country.",
+      "theme": "dollar-reserves",
+      "see_also": ["reserve currency", "petrodollar"]
+    },
+    "triffin's dilemma": {
+      "definition": "The structural tension of being the world's reserve issuer: to supply enough USD globally, the US must run trade deficits (export dollars). But persistent deficits eventually erode confidence in the currency. Slow corrosion is the price of dominance.",
+      "theme": "dollar-reserves",
+      "see_also": ["reserve currency", "exorbitant privilege"]
+    },
+    "petrodollar": {
+      "definition": "The system where oil-exporting countries get paid in USD and recycle those dollars into Treasuries — financing US deficits. Linked oil pricing to USD demand since the 1970s. Erosion of this would be a meaningful reserve-currency shift.",
+      "theme": "dollar-reserves",
+      "see_also": ["reserve currency", "exorbitant privilege"]
+    },
+    "lpr": {
+      "definition": "Loan Prime Rate. China's main lending benchmark, set monthly by the PBOC based on quotes from major banks. It's the Chinese equivalent of the Fed funds rate as a transmission point — though China uses other tools more actively.",
+      "theme": "china-economy",
+      "see_also": ["pboc"]
+    },
+    "pboc": {
+      "definition": "People's Bank of China. China's central bank. Less independent than the Fed (operates within the State Council), but increasingly important as China's macro management has become more sophisticated.",
+      "theme": "china-economy",
+      "see_also": ["lpr", "monetary policy"]
+    },
+    "balance sheet recession": {
+      "definition": "Richard Koo's framework: when the private sector is paying down debt after a bubble bursts, monetary stimulus fails because nobody wants to borrow at any rate. Japan post-1990; China post-2021 property unwind. Multi-decade workout, not cyclical.",
+      "theme": "china-economy",
+      "see_also": ["pboc"]
+    },
+    "deflation": {
+      "definition": "Sustained falling prices. Sounds harmless but is dangerous: consumers delay purchases (prices will be lower), firms cut wages, debt becomes harder to service in real terms. Hardest macro condition for central banks to fight.",
+      "theme": "china-economy",
+      "see_also": ["pboc"]
+    },
+    "ipo": {
+      "definition": "Initial Public Offering. A private company's first sale of stock to public investors, raising cash and creating a tradable share. After the IPO, the stock trades in the secondary market without affecting the company's cash directly.",
+      "theme": "capital-markets",
+      "see_also": ["primary market", "secondary market"]
+    },
+    "primary market": {
+      "definition": "Where borrowers raise capital for the first time — IPOs, bond issuances. Cash flows from investors *to* the issuing company. Distinct from the secondary market where investors trade among themselves afterward.",
+      "theme": "capital-markets",
+      "see_also": ["secondary market", "ipo"]
+    },
+    "secondary market": {
+      "definition": "Where investors trade existing stocks and bonds among themselves. The stock market you see on CNBC is mostly secondary — when you buy NVDA on Nasdaq, NVDA gets nothing; you're buying from another holder.",
+      "theme": "capital-markets",
+      "see_also": ["primary market"]
+    },
+    "liquidity": {
+      "definition": "Two meanings: (1) how easily an asset can be sold without moving the price (a Treasury is liquid; a privately-held company is illiquid); (2) how much money is sloshing around in the financial system.",
+      "theme": "capital-markets",
+      "see_also": ["secondary market"]
+    },
+    "hbm": {
+      "definition": "High-Bandwidth Memory. A stack of DRAM chips bonded directly to a GPU's package, providing the massive memory bandwidth AI training needs. SK Hynix, Samsung, and Micron are the suppliers; allocation is contested.",
+      "theme": "semiconductors",
+      "see_also": ["cowos", "gpu"]
+    },
+    "cowos": {
+      "definition": "Chip-on-Wafer-on-Substrate. TSMC's advanced packaging technology that integrates a GPU die with HBM stacks on a single substrate. Currently the binding bottleneck in AI silicon supply, more so than raw wafer capacity.",
+      "theme": "semiconductors",
+      "see_also": ["hbm", "advanced packaging"]
+    },
+    "advanced packaging": {
+      "definition": "The post-fabrication step that combines multiple chips (logic + memory + interconnect) into a single integrated package. Has gone from afterthought to bottleneck as AI chips push the limits of what a single die can do.",
+      "theme": "semiconductors",
+      "see_also": ["cowos", "hbm"]
+    },
+    "ppa": {
+      "definition": "Power Purchase Agreement. A long-term contract where a buyer (e.g., Microsoft) agrees to buy electricity from a generator (e.g., a nuclear plant) at a fixed price for 10–20 years. Used by hyperscalers to lock in clean baseload power for AI data centers.",
+      "theme": "energy-systems",
+      "see_also": ["nuclear restart", "baseload"]
+    },
+    "nuclear restart": {
+      "definition": "Bringing a previously-decommissioned US nuclear plant back online. Three Mile Island Unit 1 (MSFT PPA, 2024) and Palisades (Holtec) are the leading examples — driven by AI's need for clean baseload power that the grid can't supply otherwise.",
+      "theme": "energy-systems",
+      "see_also": ["ppa", "baseload"]
+    },
+    "baseload": {
+      "definition": "Continuous, always-on electricity generation — nuclear, geothermal, large hydro, some natural gas. Distinct from intermittent (solar, wind). AI data centers need 24/7 power, so they pay premium for baseload sources.",
+      "theme": "energy-systems",
+      "see_also": ["ppa", "nuclear restart"]
+    },
+    "behind-the-meter": {
+      "definition": "Power generated on-site (e.g., a gas turbine next to a data center) instead of taken from the grid. Hyperscalers are increasingly building behind-the-meter because grid interconnection queues are 5+ years.",
+      "theme": "energy-systems",
+      "see_also": ["ppa", "baseload"]
+    },
+    "supercycle": {
+      "definition": "An extended period (5–15 years) of structurally higher commodity prices, driven by demand outpacing supply when supply is hard to bring online (mines take 10+ years). Current thesis: electrification + AI + reshoring meeting decade-long underinvestment.",
+      "theme": "commodities",
+      "see_also": ["commodities"]
+    },
+    "scaling laws": {
+      "definition": "Empirical observation that AI model capability increases predictably with more compute, data, and parameters. Has held for 7+ years. The entire AI capex thesis depends on this curve continuing — a flagship release that breaks it would be the regime change.",
+      "theme": "ai-models-economics",
+      "see_also": ["ai-compute-capex"]
+    },
+    "post-zirp": {
+      "definition": "The era after Zero Interest-Rate Policy ended — i.e., post-2022, when the Fed lifted rates from ~0% back to a regular regime. ZIRP (2009–2022, with brief interruption) was the historic anomaly; 'post-ZIRP' just means rates and capital costs are no longer free, which has reshaped private credit, IPO conditions, and the cost of long-duration assets.",
+      "theme": "monetary-policy",
+      "see_also": ["zirp", "real yield", "capital-markets"]
+    },
+    "zirp": {
+      "definition": "Zero Interest-Rate Policy. The Fed (and most major central banks) held policy rates near 0% from 2009 to 2015, again from 2020 to 2022. Made capital effectively free, which inflated long-duration asset prices (tech stocks, real estate, growth equity) and birthed the 'free money' era of venture capital and SaaS.",
+      "theme": "ai-compute-capex",
+      "see_also": ["post-zirp"]
+    },
+    "smic": {
+      "definition": "Semiconductor Manufacturing International Corporation. China's largest domestic chip foundry, government-backed, tasked with achieving leading-edge manufacturing independence. Currently producing 7nm-class chips with reportedly poor yields using workarounds (multi-patterning on older DUV tools). Blocked from ASML's EUV machines by US export controls.",
+      "theme": "semiconductors",
+      "see_also": ["euv", "process node", "china-tech", "export controls"]
+    },
+    "euv": {
+      "definition": "Extreme Ultraviolet lithography. ASML's chipmaking tool that uses 13.5nm light to pattern sub-7nm features; required for 5nm and below. ASML (Dutch) is the sole supplier globally. Export controls on EUV to China are the single most important hardware choke point in the US-China chip tech competition.",
+      "theme": "semiconductors",
+      "see_also": ["smic", "asml", "process node", "export controls"]
+    },
+    "asml": {
+      "definition": "Dutch company and sole global supplier of EUV lithography machines. Without ASML, TSMC, Samsung, and Intel cannot manufacture leading-edge chips. The Dutch government, under US pressure, extended export controls to include ASML's older DUV machines as well, further restricting Chinese fab options.",
+      "theme": "semiconductors",
+      "see_also": ["euv", "smic", "export controls"]
+    },
+    "process node": {
+      "definition": "The marketing term for a chip generation (7nm, 5nm, 3nm, 2nm). The number no longer literally means the transistor size but is a competitive benchmark. Each new node packs more transistors in the same area, improving performance and efficiency. TSMC and Samsung are at 3nm; Intel is catching up at 18A/20A.",
+      "theme": "semiconductors",
+      "see_also": ["smic", "euv", "tsmc"]
+    },
+    "tsmc": {
+      "definition": "Taiwan Semiconductor Manufacturing Company. The world's dominant chip foundry — makes chips for Apple, NVDA, AMD, Qualcomm, and most AI labs. Its concentration in Taiwan is the central geopolitical risk in the semiconductor supply chain.",
+      "theme": "semiconductors",
+      "see_also": ["process node", "cowos", "asml"]
+    },
+    "export controls": {
+      "definition": "Government rules restricting which hardware and technology can be sold to which countries. The US Bureau of Industry and Security (BIS) issues these. Key AI-relevant controls: H100/H200/B100 GPU exports to China; EUV machine exports; ASML DUV restrictions. Updated frequently — a new BIS rule can reshape the competitive landscape overnight.",
+      "theme": "ai-policy-regulation",
+      "see_also": ["bis", "smic", "euv", "entity list"]
+    },
+    "bis": {
+      "definition": "Bureau of Industry and Security (US Commerce Dept). Issues export control rules that govern which technologies can be sold to which countries. For AI, BIS controls GPU exports, chip tool exports (EUV/DUV), and adds companies to the Entity List (effectively a sanctions-lite designation). One of the most consequential AI-policy actors.",
+      "theme": "ai-policy-regulation",
+      "see_also": ["export controls", "entity list"]
+    },
+    "entity list": {
+      "definition": "A BIS list of foreign companies and organizations that US exporters cannot sell to without a license (usually denied). SMIC, Huawei, and hundreds of Chinese AI and defense firms are on it. Being added to the Entity List is effectively a supply chain death sentence for hardware-dependent companies.",
+      "theme": "ai-policy-regulation",
+      "see_also": ["bis", "export controls", "smic"]
+    },
+    "eu ai act": {
+      "definition": "The EU's comprehensive AI regulation, adopted 2024. Classifies AI systems by risk (unacceptable, high, limited, minimal). 'General Purpose AI' (GPAI) models above a compute threshold (~10²⁵ FLOPs) face transparency, evaluation, and incident-reporting obligations. Frontier GPAI models face stricter adversarial testing requirements.",
+      "theme": "ai-policy-regulation",
+      "see_also": ["gpai", "compute threshold"]
+    },
+    "gpai": {
+      "definition": "General Purpose AI Model. The EU AI Act's term for large foundation models (LLMs, multimodal models) that can be used for many downstream tasks. Above 10²⁵ FLOPs training compute: transparency and copyright obligations. 'Systemic risk' GPAI above 10²⁶ FLOPs: adversarial testing, incident reporting, model evaluation before deployment.",
+      "theme": "ai-policy-regulation",
+      "see_also": ["eu ai act", "compute threshold"]
+    },
+    "compute threshold": {
+      "definition": "A FLOPs (floating-point operations) cutoff used in regulation to define 'frontier' AI models. EU AI Act uses 10²⁵ FLOPs for GPAI obligations; US executive orders have referenced 10²⁶ FLOPs. Roughly: GPT-4 class is around 10²⁴–10²⁵ FLOPs; the next generation is above these thresholds.",
+      "theme": "ai-policy-regulation",
+      "see_also": ["gpai", "eu ai act", "scaling laws"]
+    },
+    "capability signal": {
+      "definition": "Any observable indicator that AI capabilities have meaningfully advanced — a new benchmark result, a flagship model release, an agent completing a hard long-horizon task, a lab disclosing a major training run. Used to track whether the scaling curve is holding and what the frontier looks like versus the state-of-the-art a quarter ago.",
+      "theme": "ai-models-economics",
+      "see_also": ["scaling laws", "benchmark"]
+    },
+    "benchmark": {
+      "definition": "A standardized test used to compare AI model capabilities — MMLU, HumanEval, GPQA, SWE-bench, etc. Important caveat: labs know the benchmarks and may (intentionally or not) overfit to them. A benchmark result is a signal, not ground truth. Watch for new 'hard' benchmarks that haven't been saturated yet.",
+      "theme": "ai-models-economics",
+      "see_also": ["capability signal", "scaling laws"]
+    },
+    "inference-time compute": {
+      "definition": "Using extra computation at inference (not training) to improve outputs — e.g., chain-of-thought reasoning, search trees, self-consistency sampling. OpenAI's o1/o3 and DeepSeek-R1 pushed this approach. The key question: does it compound with training-time scaling, or substitute for it?",
+      "theme": "ai-models-economics",
+      "see_also": ["scaling laws", "capability signal"]
+    },
+    "open weights": {
+      "definition": "A model whose weights (the learned parameters) are publicly released, allowing anyone to run, fine-tune, or modify it. Meta's Llama series is the leading example. Distinct from 'open source' (which implies reproducible training). Open-weights models compress the capability gap between frontier labs and everyone else.",
+      "theme": "ai-models-economics",
+      "see_also": ["capability signal", "tech-investments"]
+    },
+    "flops": {
+      "definition": "Floating-point operations. The standard unit for measuring AI training compute. A GPT-3-scale training run is ~3×10²³ FLOPs; GPT-4 class is estimated around 10²⁴–10²⁵ FLOPs; frontier 2025-era models are around 10²⁶ FLOPs. Used in regulation as the threshold to define 'frontier.'",
+      "theme": "ai-models-economics",
+      "see_also": ["compute threshold", "scaling laws"]
+    },
+    "huawei ascend": {
+      "definition": "Huawei's domestic AI accelerator chip series (Ascend 910B/910C). Built on SMIC's 7nm-class process, it's China's main attempt at an H100 substitute. Performance is reportedly 60-70% of H100 at comparable tasks; limited by HBM availability and yield issues. The most watched signal for China's AI compute independence.",
+      "theme": "china-tech",
+      "see_also": ["smic", "hbm", "export controls"]
+    },
+    "deepseek": {
+      "definition": "Chinese AI lab that shocked the AI world in early 2025 with DeepSeek-R1 — a frontier-class reasoning model trained at a fraction of US lab costs, then released open-weights. Demonstrated that efficient training can partially compensate for compute disadvantage under export controls. Key capability signal for China's AI trajectory.",
+      "theme": "ai-models-economics",
+      "see_also": ["open weights", "capability signal", "china-tech", "inference-time compute"]
+    }
+  }
+}
