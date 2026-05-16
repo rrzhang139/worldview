@@ -21,3 +21,10 @@ What bandwidth was to the internet (1995–2010), power is to AI (2024–?). Whe
 - ↔ `ai-compute-capex.md` — power is the binding constraint on AI buildout.
 - ↔ `commodities.md` — uranium, nat gas, copper.
 - ↔ `industrial-policy-defense.md` — IRA tax credits, NRC reform, transmission siting.
+
+## Log
+
+- 2026-05-13: Omdia / Tom's Hardware: ~half of planned US data center builds delayed or canceled; root causes are (a) power infrastructure shortages (transformers, switchgear, gas turbines) and (b) China-sourced components. — First independent quantification of the wedge between *announced* and *deliverable* AI capex. PJM/FERC unlock from W19 was necessary but not sufficient: the constraint has now stacked onto upstream manufacturing of grid hardware.
+- 2026-05-13: Gallup poll: ~7 in 10 Americans oppose data centers near them; organized local resistance movements covered nationally (Democracy Now, Newsweek). — Political-economy layer on the power constraint. Substitutions (behind-the-meter, nuclear restart) reduce grid contention but don't eliminate community pushback on land use, water, and utility-rate cost-shifting. Watch state PUC decisions on whether data-center load is cross-subsidized by residential ratepayers — that's where the backlash gets teeth.
+- 2026-05-06: Anthropic–Colossus deal expressed interest in *multi-gigawatt orbital AI compute* with SpaceX. — The "exotic substitution" frontier on the power constraint just moved a notch further. Watch as a leading-indicator on terrestrial grid scarcity: when labs start writing orbital-compute LOIs, the binding-constraint story is no longer rhetorical.
+- 2026-05-05: PJM Dec-2025 capacity auction shortfall (6,623 MW under reliability target; ~5,100 MW of demand surge from data centers) and FERC's Dec-18-2025 order on data-center colocation are now propagating into 2026 PPA negotiations. PJM interconnection queues stretched past 8 years. — The grid-side bottleneck is hardening: behind-the-meter and direct-power-plant deals (Talen–AWS Susquehanna 17yr/$18B/1.92 GW; TMI–MSFT) are no longer optional, they're the *only* delivery path on AI buildout timelines.

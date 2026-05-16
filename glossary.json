@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-04-27",
+  "updated": "2026-05-16",
   "description": "Permanent term lookup. Read by web/app.js to surface instant definitions on highlight. Claude appends/updates entries when explaining terms in chat.",
   "entries": {
     "bond": {
@@ -367,6 +367,111 @@
       "definition": "Chinese AI lab that shocked the AI world in early 2025 with DeepSeek-R1 — a frontier-class reasoning model trained at a fraction of US lab costs, then released open-weights. Demonstrated that efficient training can partially compensate for compute disadvantage under export controls. Key capability signal for China's AI trajectory.",
       "theme": "ai-models-economics",
       "see_also": ["open weights", "capability signal", "china-tech", "inference-time compute"]
+    },
+    "em": {
+      "definition": "Emerging Markets — the bucket macro investors use for non-developed economies (China, India, Brazil, Mexico, Indonesia, South Africa, etc.). 'EM debt' is sovereign and corporate bonds from these countries; 'EM equity' is their stock markets. EM is sensitive to dollar strength (debts often USD-denominated), commodity prices (many are exporters), and global risk appetite — when DXY rises or US rates spike, EM tends to bleed.",
+      "theme": "china-economy",
+      "see_also": ["dxy", "reserve currency", "credit spread"]
+    },
+    "monetary stimulus": {
+      "definition": "Central-bank actions to ease financial conditions and encourage borrowing/spending — cutting policy rates, asset purchases (QE), liquidity facilities. Works in normal cycles by lowering the cost of credit. Famously *fails* in a balance-sheet recession (Japan post-1990, China post-2021): when households and firms are paying down debt, no rate is low enough to make them borrow. Then the lever that actually works is fiscal stimulus aimed at household demand, not more cheap credit.",
+      "theme": "monetary-policy",
+      "see_also": ["balance sheet recession", "fed", "pboc", "deflation"]
+    },
+    "ig": {
+      "definition": "Investment Grade. The top tier of corporate credit quality — bonds rated BBB-/Baa3 or higher by S&P/Moody's. Pension funds, insurers, and most passive bond ETFs are restricted to IG paper, so a downgrade from IG to high-yield ('fallen angel') forces mechanical selling. The IG/HY boundary is the most consequential single line in the credit market.",
+      "theme": "capital-markets",
+      "see_also": ["ig corporate debt index", "credit spread", "credit market"]
+    },
+    "ig corporate debt index": {
+      "definition": "A benchmark basket of investment-grade corporate bonds (e.g., Bloomberg US Corporate IG Index) that passive funds and ETFs like LQD track. Issuer weights are set by market value of debt outstanding, so the biggest borrowers automatically become the biggest index positions — which is how hyperscaler bond issuance silently concentrates passive-bond-fund exposure to AI capex.",
+      "theme": "capital-markets",
+      "see_also": ["ig", "hyperscaler", "credit spread"]
+    },
+    "pjm auction shortfall": {
+      "definition": "PJM is the largest US grid operator (Mid-Atlantic + Midwest). Each year it runs a 'capacity auction' to procure enough generation to meet projected peak demand plus a reliability margin. A shortfall means cleared capacity came in below that target — in Dec 2025, by 6,623 MW. Clearing prices spike when this happens, and the gap signals that new generation isn't being added fast enough to absorb data-center load growth.",
+      "theme": "energy-systems",
+      "see_also": ["ferc colocation", "behind-the-meter", "ppa"]
+    },
+    "ferc colocation": {
+      "definition": "Federal Energy Regulatory Commission rules on whether a data center can sit directly next to a power plant and take electricity 'behind-the-meter' (bypassing the grid). FERC's Dec-18-2025 order forced PJM to publish a colocation framework — three transmission service options and reformed behind-the-meter generation rules. The decision unlocks deals like Talen–AWS (Susquehanna nuclear) and is the regulatory hinge for hyperscalers buying baseload power directly from generators instead of waiting in 8-year grid interconnection queues.",
+      "theme": "energy-systems",
+      "see_also": ["behind-the-meter", "ppa", "pjm auction shortfall", "nuclear restart"]
+    },
+    "loi": {
+      "definition": "Letter of Intent. A non-binding agreement signaling commercial intent to do a deal — used as a placeholder before a final binding contract. Common for capex-heavy deals (data centers, PPAs, chip supply) where the parties want to publicly lock in alignment while the terms are still being negotiated. An LOI is real signal (legal/financial teams agreed to put it on paper) but not yet a contract.",
+      "theme": "capital-markets",
+      "see_also": ["ppa", "ai-compute-capex"]
+    },
+    "lqd": {
+      "definition": "iShares iBoxx $ Investment Grade Corporate Bond ETF — the canonical retail-accessible way to own a basket of US investment-grade corporate bonds. ~$30B in assets, holds ~2,500 IG bonds weighted by market value of debt outstanding. ~4% of LQD is hyperscaler paper (META, GOOG, AMZN, ORCL), and *that share rises mechanically* every time a hyperscaler issues new debt — passive bond exposure is silently long AI capex.",
+      "theme": "capital-markets",
+      "see_also": ["ig", "ig corporate debt index", "credit market", "hyperscaler"]
+    },
+    "agg": {
+      "definition": "iShares Core US Aggregate Bond ETF (and the Bloomberg US Aggregate Bond Index it tracks) — the standard 'total US bond market' benchmark. Holds Treasuries, agency MBS, and IG corporates in market-cap weights. Roughly 25–30% corporate credit, of which a slice is hyperscaler debt. If you own AGG or BND (Vanguard's equivalent), you have indirect hyperscaler-bond exposure.",
+      "theme": "capital-markets",
+      "see_also": ["lqd", "ig", "treasury", "credit market"]
+    },
+    "slip risk": {
+      "definition": "The probability that a scheduled product launch, shipment, or capacity ramp gets pushed later than the company guided. Stock-market shorthand for 'deadlines tend to move right.' Sits alongside yield risk (does it work at spec) and demand risk (will customers still want it) as the three core schedule risks for any physical-product company. For NVDA pre-W20, slip risk on Vera Rubin was the dominant variable being priced; for hyperscaler data centers, the Omdia 'half of US builds delayed or canceled' finding is slip risk crystallizing at the buildout layer.",
+      "theme": "tech-investments",
+      "see_also": ["capex", "ai-compute-capex"]
+    },
+    "capex curve": {
+      "definition": "The trajectory of total AI infrastructure spending by hyperscalers over time — ~$200B in 2024, ~$430B in 2025, ~$725B in 2026. The central object of the AI bubble debate: rising means the buildout is intact; flat means saturation; falling is the regime change. Distinct from the *capability-per-dollar curve* (efficiency gains within each GPU generation) — the two are separate levers on whether AI keeps improving.",
+      "theme": "ai-compute-capex",
+      "see_also": ["capex", "hyperscaler", "capability per dollar"]
+    },
+    "capability per dollar": {
+      "definition": "How much AI capability (intelligence, useful work, tokens served at quality) you get per dollar of compute spent. Has risen with each GPU generation (V100→A100→H100→B200→Rubin). The 'efficiency lever' on the AI scaling story — improving capability-per-dollar lets labs keep pushing the frontier without proportionally climbing the capex curve. The bear case is the inverse: rising capex but flat capability-per-dollar means diminishing returns on scaling laws are showing up.",
+      "theme": "ai-models-economics",
+      "see_also": ["scaling laws", "capex curve", "inference-time compute", "flops"]
+    },
+    "hbm4": {
+      "definition": "Fourth generation of High-Bandwidth Memory. Targeting ~2.0–2.5 TB/s per stack (vs HBM3e's ~1.2–1.3 TB/s) with more stacks per package, ~75% better power efficiency, and pin speeds >11 Gb/s. Sole suppliers: SK Hynix (lead), Samsung, Micron. The single biggest lever behind Vera Rubin's ~10× lower inference cost claim — inference is memory-bandwidth-bound, so doubling HBM bandwidth roughly doubles tokens-per-second-per-GPU.",
+      "theme": "semiconductors",
+      "see_also": ["hbm", "cowos", "vera rubin"]
+    },
+    "kv cache": {
+      "definition": "Key-Value cache. During LLM inference, each token's attention keys and values are stored in GPU memory so subsequent tokens don't recompute them. Grows linearly with sequence length × in-flight requests, so it dominates HBM usage at scale. More HBM capacity per GPU → more KV cache resident → more requests batched simultaneously and longer contexts servable without paging. The hardware substrate that makes continuous batching scale.",
+      "theme": "ai-models-economics",
+      "see_also": ["continuous batching", "hbm4", "inference-time compute"]
+    },
+    "continuous batching": {
+      "definition": "Inference scheduling technique (also called 'in-flight batching' or 'iteration-level batching') where new requests are added to a running batch as old ones finish, instead of waiting for a fixed batch to complete together. Standard in vLLM, TensorRT-LLM, SGLang. Hugely improves GPU utilization for production LLM serving where requests arrive asynchronously. A software technique, but its effectiveness is gated by KV cache memory.",
+      "theme": "ai-models-economics",
+      "see_also": ["kv cache", "hbm4"]
+    },
+    "prefill decode": {
+      "definition": "The two phases of LLM inference. **Prefill** = process the prompt and build initial KV cache (compute-bound, parallel across tokens). **Decode** = generate output tokens one at a time, autoregressively (memory-bandwidth-bound, sequential). They have opposite bottlenecks, so running them on the same GPU wastes one side's resources. 'Disaggregated serving' routes prefill and decode to different hardware — Rubin CPX is Nvidia's first chip designed specifically for the prefill phase, a major lever in Rubin's inference cost story.",
+      "theme": "ai-models-economics",
+      "see_also": ["rubin cpx", "kv cache", "inference-time compute"]
+    },
+    "rubin cpx": {
+      "definition": "A separate Nvidia chip in the Rubin family designed specifically for the *prefill* phase of LLM inference (compute-heavy, long-context processing). Pairs with standard Rubin GPUs that handle *decode* (memory-bandwidth-bound token generation). Hardware-native support for disaggregated serving — previously done in software (DistServe, Splitwise). Most important for long-context and agentic workloads where prefill cost dominates.",
+      "theme": "semiconductors",
+      "see_also": ["prefill decode", "vera rubin", "inference-time compute"]
+    },
+    "vera rubin": {
+      "definition": "Nvidia's GPU generation after Blackwell, named after the astronomer. Mass production ramp Q3 2026, July delivery to top US customers (de-risked May 15, 2026). Headline claims: ~10× lower inference cost per token, 75% fewer GPUs to train an equivalent model vs Blackwell. Achieved via HBM4, FP4/FP6 second gen, Rubin CPX (prefill chip), NVL576 fabric, and improved perf/watt. The platform that the late-2026 / early-2027 frontier models (Claude 5, GPT-6, Gemini 4) will train on.",
+      "theme": "semiconductors",
+      "see_also": ["hbm4", "rubin cpx", "nvlink", "capability per dollar"]
+    },
+    "fp4": {
+      "definition": "4-bit floating-point number format. Quantizing model weights and activations from FP16/BF16 (16-bit) to FP4 cuts memory and roughly doubles math throughput per chip, typically with minor quality loss for inference. Blackwell introduced hardware FP4 support; Rubin extends it. The standard precision tier for production LLM inference in 2026.",
+      "theme": "ai-models-economics",
+      "see_also": ["flops", "hbm4", "vera rubin"]
+    },
+    "moe": {
+      "definition": "Mixture-of-Experts. An LLM architecture where the model has many 'expert' subnetworks but only routes each token to a few of them at a time. Lets you scale total parameters (capacity) without proportionally scaling per-token compute. Mixtral, DeepSeek-V3, GPT-5, and Gemini are MoE. Expert parallelism (distributing experts across GPUs) benefits hugely from large low-latency interconnect domains — the case for NVL72 / NVL576 fabrics.",
+      "theme": "ai-models-economics",
+      "see_also": ["scaling laws", "nvlink", "inference-time compute"]
+    },
+    "nvlink": {
+      "definition": "Nvidia's proprietary high-bandwidth GPU-to-GPU interconnect, much faster than PCIe or InfiniBand. The NVLink 'domain' is the cluster of GPUs that can talk at NVLink speed: Blackwell GB200 NVL72 = 72 GPUs; Rubin Ultra NVL576 = 576 GPUs. Large NVLink domains are essential for tensor and expert parallelism — they let a single training or inference job span many GPUs without interconnect being the bottleneck.",
+      "theme": "semiconductors",
+      "see_also": ["vera rubin", "moe", "cowos"]
     }
   }
 }

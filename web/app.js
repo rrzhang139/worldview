@@ -356,7 +356,11 @@ function hideAddBtn() {
   addBtn.style.display = "none";
 }
 
+const ADD_BTN_ENABLED =
+  location.hostname === "localhost" || location.hostname === "127.0.0.1";
+
 function showAddBtn(rect) {
+  if (!ADD_BTN_ENABLED) return;
   addBtn.style.top = `${window.scrollY + rect.top - 36}px`;
   addBtn.style.left = `${window.scrollX + rect.left + rect.width / 2 - 28}px`;
   addBtn.style.display = "block";

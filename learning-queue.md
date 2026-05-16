@@ -186,3 +186,83 @@ Entries that mature into stable understanding can be promoted to a permanent `gl
 **Notes:** (1) Manufacturing yield vs. bond yield — same word, different domain. Chip yield = % of chips on a wafer that pass quality testing. SMIC Ascend 910C yield 20-40% vs TSMC 90%+; the gap explains why Chinese AI chips cost far more per usable unit. Effective output = yield × wafer capacity, so "5x capacity goal" overstates actual usable chip gain. (2) Multi-model routing = deploying an orchestration layer that picks different AI models for different tasks rather than committing to a single provider. Signals commoditization of individual models and value migration toward the routing/enterprise layer. (3) Case-by-case licensing (BIS) = switch from blanket denial to individual evaluation for H200-class chip exports to China; requires US supply sufficiency cert, no capacity diversion, recipient security audit, independent third-party performance test. Still practically very restrictive.
 
 ---
+## IG
+
+*[2026-05-09 23:52] via highlight*
+
+**Context:** Hyperscaler concentration in IG corporate debt index doubled in 12 months — 2.2% → 4.1%. UBS now estimates $230–240B hyperscaler bond issuance in 2026 (vs. $121B in 2025; Oracle $18B and Alphabet $20B-incl-100yr-GBP-bond are recent prints). The capex bill is no longer just an equity story — it's a credit-market concentration risk and, by extension, a passive-bond-fund exposure that index investors are silently long. The new test for the bubble-watch trigger on themes/ai-compute-capex.md: do IG spreads widen if any AI-revenue stumble shows up at NVDA earnings May 20 or in Q2 hyperscaler prints? If concentration matters, even a modest spread-widening would compound mechanically into higher cost of next-round capex financing. Updates themes/ai-compute-capex.md, themes/tech-investments.md.
+
+---
+
+## IG corporate debt index
+
+*[2026-05-09 23:52] via highlight*
+
+**Context:** Hyperscaler concentration in IG corporate debt index doubled in 12 months — 2.2% → 4.1%. UBS now estimates $230–240B hyperscaler bond issuance in 2026 (vs. $121B in 2025; Oracle $18B and Alphabet $20B-incl-100yr-GBP-bond are recent prints). The capex bill is no longer just an equity story — it's a credit-market concentration risk and, by extension, a passive-bond-fund exposure that index investors are silently long. The new test for the bubble-watch trigger on themes/ai-compute-capex.md: do IG spreads widen if any AI-revenue stumble shows up at NVDA earnings May 20 or in Q2 hyperscaler prints? If concentration matters, even a modest spread-widening would compound mechanically into higher cost of next-round capex financing. Updates themes/ai-compute-capex.md, themes/tech-investments.md.
+
+---
+
+## PJM auction shortfall
+
+*[2026-05-09 23:59] via highlight*
+
+**Context:** Power constraint hardens: PJM auction shortfall + FERC colocation rules now propagating into 2026 PPA negotiations. PJM's December 2025 capacity auction came in 6,623 MW under reliability target (data centers ~5,100 MW of the surge). PJM interconnection queues are >8 years. FERC's Dec-18-2025 order forced PJM to publish data-center colocation rules — three transmission service options + reformed behind-the-meter generation rules. Read alongside Talen–AWS (17yr/$18B/1.92 GW Susquehanna nuclear PPA) and TMI–MSFT: behind-the-meter and direct-power-plant deals are no longer one option among many — they're the only delivery path on AI buildout timelines. The orbital-compute LOI in (1) is the canary at the exotic end of the substitution curve. Updates themes/energy-systems.md.
+
+---
+
+## FERC colocation
+
+*[2026-05-09 23:59] via highlight*
+
+**Context:** Power constraint hardens: PJM auction shortfall + FERC colocation rules now propagating into 2026 PPA negotiations. PJM's December 2025 capacity auction came in 6,623 MW under reliability target (data centers ~5,100 MW of the surge). PJM interconnection queues are >8 years. FERC's Dec-18-2025 order forced PJM to publish data-center colocation rules — three transmission service options + reformed behind-the-meter generation rules. Read alongside Talen–AWS (17yr/$18B/1.92 GW Susquehanna nuclear PPA) and TMI–MSFT: behind-the-meter and direct-power-plant deals are no longer one option among many — they're the only delivery path on AI buildout timelines. The orbital-compute LOI in (1) is the canary at the exotic end of the substitution curve. Updates themes/energy-systems.md.
+
+---
+
+## LOI
+
+*[2026-05-10 08:22] via highlight*
+
+**Context:** Power constraint hardens: PJM auction shortfall + FERC colocation rules now propagating into 2026 PPA negotiations. PJM's December 2025 capacity auction came in 6,623 MW under reliability target (data centers ~5,100 MW of the surge). PJM interconnection queues are >8 years. FERC's Dec-18-2025 order forced PJM to publish data-center colocation rules — three transmission service options + reformed behind-the-meter generation rules. Read alongside Talen–AWS (17yr/$18B/1.92 GW Susquehanna nuclear PPA) and TMI–MSFT: behind-the-meter and direct-power-plant deals are no longer one option among many — they're the only delivery path on AI buildout timelines. The orbital-compute LOI in (1) is the canary at the exotic end of the substitution curve. Updates themes/energy-systems.md.
+
+---
+
+## What's contributing to Vera Rubin's 10× lower inference cost? HBM, L2 cache, continuous batching — what are the main levers? And will we see capability gains?
+
+*[2026-05-16 13:30] via chat*
+
+**Context:** User asking technical breakdown of where Rubin's inference cost reduction comes from. Already knew HBM/cache/continuous-batching are involved. Second question: do labs use Rubin to train more capable models, or just to serve existing ones cheaper?
+
+**Notes:** Inference is memory-bandwidth-bound (streaming weights through compute per token), not FLOPs-bound — so the levers are mostly memory and scheduling. **Six main levers stacked multiplicatively:** (1) HBM4 bandwidth (~1.2 → ~2.0–2.5 TB/s) + more stacks per package → biggest single lever; (2) more HBM capacity → more KV cache resident → enables continuous batching to scale (continuous batching itself is software — vLLM/TensorRT-LLM/SGLang — gated by KV cache room); (3) **Rubin CPX**, a separate context/prefill-optimized chip, makes disaggregated serving (prefill on CPX, decode on Rubin) hardware-native — big lever for long-context/agentic inference; (4) FP4/FP6 quantization second gen — ~2× throughput per GPU; (5) NVL576 fabric (vs Blackwell's NVL72) → 8× the NVLink domain, huge for MoE expert parallelism; (6) larger L2/SRAM, better memory hierarchy, ~3× perf/watt. Stacked with haircuts, that gets to ~10× cheaper inference. **On capability gains — yes, three paths labs can spend the Rubin 'dividend':** (A) same capability, lower price → API price compression; (B) bigger model, same budget — "75% fewer GPUs to train equivalent" inverts to ~4× compute at constant capex; (C) more inference-time compute per query — o1/o3-style reasoning gets cheaper to run longer. Frontier labs will likely do all three (mostly B + C, some A passed through). Anthropic Colossus 1 deal was about bridging to Rubin — next gen of Claude/GPT/Gemini will train on Rubin. The regime-change scenario remains: B and C underperform expectations (scaling diminishing returns) and only A materializes → cheaper inference of existing-class models, no capability frontier.
+
+---
+
+## What is the "capex curve" and what does "capability-per-dollar lever" mean? Does the curve going up mean it costs more capex for the same gains?
+
+*[2026-05-16 13:00] via chat*
+
+**Context:** W20 brief, Vera Rubin entry: "the capex curve gets a capability-per-dollar lever on top of the brute-force lever." User wanted to unpack both terms and tested intuition that the curve rising = diminishing returns (more spend, same gains).
+
+**Notes:** Two distinct curves were being conflated in the phrasing. **(1) Capex curve (over time):** total $ hyperscalers spend on AI infra annually — $200B (2024) → $725B (2026 guide). Question is how fast it rises / when it plateaus. **(2) Capability-per-dollar curve (efficiency):** how much AI capability per $ of compute — has been rising each GPU generation (V100→A100→H100→B200→Rubin). Two levers to keep AI improving: brute-force (spend more, climb curve 1) and efficiency (climb curve 2). Rubin's claim of "10× cheaper inference / 75% fewer GPUs to train" is the efficiency lever firing. **User's intuition (more capex, same gains) = the bear case.** That's diminishing returns on scaling laws — GPT-3 $10M → GPT-4 $100M → GPT-5 $1B+ for incrementally less capability lift. Has NOT happened yet (7 frontier releases in Feb–May 2026 = capability cadence intact) but is the single biggest tail risk for the AI capex thesis, and the "what would change my mind" trigger on themes/ai-models-economics.md. **The middle case I flagged as a "different regime change":** Rubin's efficiency works, but capability lift stalls. Per-token prices fall 5–10× (looks bullish), but no new capability frontier (thesis silently broken). Watch in order: (a) API token prices, (b) flagship benchmarks (SWE-bench, GPQA-hard, ARC-AGI), (c) NVDA forward guide on Rubin 2. The combination — falling prices + plateauing benchmarks — is the trap to catch early.
+
+---
+
+## What is "slip risk" — what specifically was being priced into NVDA pre-earnings?
+
+*[2026-05-16 12:45] via chat*
+
+**Context:** W20 brief described Vera Rubin's Digitimes "design issues resolved" report as a "de-risk" of slip risk that had been pricing into NVDA pre-earnings. User wanted to unpack what slip risk is and why it mattered specifically for Rubin.
+
+**Notes:** Slip risk = probability that a scheduled launch / shipment / ramp date gets pushed later than guidance. For Rubin specifically: NVDA had guided H2 2026 commercial shipments / Q3 mass-production ramp; late-W19 supply-chain reports flagged a cooling-architecture redesign issue that historically would slip a platform by 1–2 quarters. Market priced three scenarios (no slip / mild slip into Q4-Q1 / deep slip with hyperscaler order delays + NVDA guide cut). Digitimes May 15 report ("issues largely resolved," July delivery on track) shifted probability mass back to no-slip, cut the bad-tail, stock can re-rate up. **The broader frame:** any physical-product company on a schedule has three risks — slip (date), yield/quality (does it work at spec), demand (will customers still want it). For NVDA, demand is ~zero (hyperscalers pre-committed), yield is moderate (HBM4 is new), so slip was the dominant variable. The same frame applies to TSMC node transitions and to data-center construction — Omdia's "half of US DC builds delayed" finding from W20 is slip risk crystallizing at the buildout layer.
+
+---
+
+## How do you actually invest in hyperscaler bonds? And what did "primary-market capital flowing into hyperscalers via the bond market" mean?
+
+*[2026-05-16 12:30] via chat*
+
+**Context:** W20 brief framed Cerebras IPO as the first significant primary-market capital flowing into non-hyperscaler AI-infra equity, contrasting it with how AI infra has so far been funded "through hyperscalers via the bond market." User wanted both the conceptual unpack and the practical "how do I actually own this."
+
+**Notes:** Primary market = new securities sold by issuer, cash goes to the issuer (Cerebras IPO, Oracle $18B bond deal, Alphabet $20B incl. 100yr GBP). Cerebras was first major non-hyperscaler primary-market AI-infra raise in a long time; before that, virtually all AI-capex primary-market dollars flowed through hyperscaler bond issuance ($121B in 2025, $230-240B est. 2026). **Four ways to own hyperscaler bonds:** (1) buy individual bonds direct via brokerage (illiquid, $1K-$10K face minimums, primarily institutional); (2) targeted IG ETFs — **LQD** is the canonical one (~$30B AUM, ~2,500 IG corporates, ~4% hyperscaler exposure); VCIT, IGSB similar; (3) broad bond index funds — AGG / BND, ~25-30% corporate credit, smaller hyperscaler slice; (4) active IG mutual funds (PIMCO, DoubleLine) — typically over-weight hyperscaler paper vs index. **Key insight:** bond ETFs are passive, index weights set by market value of debt outstanding, so when Alphabet issues $20B the index mechanically reweights toward Alphabet — every LQD holder gets more concentrated AI-capex exposure without choosing it. That's the mechanism behind the W19 "4.1% hyperscaler share of US Corp IG Index" concentration story. No "hyperscaler bond ETF" exists yet; an "ex-mega-tech IG" product might appear if concentration keeps climbing.
+
+---
+

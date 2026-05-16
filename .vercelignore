@@ -1,0 +1,10 @@
+.claude/
+__pycache__/
+.git/
+.venv/
+*.pyc
+CLAUDE.md
+learning-queue.md
+server.py
+build.py
+README.md

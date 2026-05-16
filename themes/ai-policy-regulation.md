@@ -23,3 +23,8 @@ A BIS export control rule is just a national security strategy expressed as a li
 - ↔ `ai-compute-capex.md` — compute governance (reporting requirements, licensing thresholds) adds cost and friction to large training runs.
 - ↔ `ai-models-economics.md` — EU AI Act obligations on GPAI models add evaluation/red-teaming cost to deployment.
 - ↔ `industrial-policy-defense.md` — CHIPS Act, IRA, export controls are all the same policy toolkit applied to different bottlenecks.
+
+## Log
+
+- 2026-05-14: Trump–Xi bilateral in Beijing produced no announced movement on chip export controls. Xi told visiting US CEOs (incl. Huang, Cook, Musk) China will "open wider." ~10 Chinese companies have BIS H200 licenses (up to 75K chips each) since Jan 2026 — **zero deliveries to date.** — The H200 case-by-case licensing regime is *de jure* open but *de facto* deadlocked. Bottleneck has migrated from US rules to Chinese counter-measures (security review of US chips, data-localization, indigenous-preference policies). Reads through the regime model: export controls now have a *symmetric* enforcement layer on the other side.
+- 2026-05-13: Nvidia's Jensen Huang added last-minute to Trump's Beijing delegation after initial omission. — The chip CEO is now a tier-1 trade-delegation seat; AI chip policy is being negotiated at heads-of-state level rather than via BIS rule-making, which compresses the timeline for rule changes but makes outcomes more volatile.

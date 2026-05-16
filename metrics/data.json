@@ -8,7 +8,8 @@
       "source": "TSMC quarterly earnings",
       "description": "Leading indicator on AI silicon demand; proxy for whether the capex cycle is real.",
       "series": [
-        {"date": "2026-03-31", "value": 35.1}
+        {"date": "2026-03-31", "value": 35.1},
+        {"date": "2026-04-30", "value": 17.5}
       ]
     },
     {
@@ -20,7 +21,33 @@
       "description": "The central number for the AI arms race. Rising = bull cycle intact; guidance cuts = regime shift.",
       "series": [
         {"date": "2026-04-22", "value": 700},
-        {"date": "2026-04-29", "value": 725}
+        {"date": "2026-04-29", "value": 725},
+        {"date": "2026-05-09", "value": 725},
+        {"date": "2026-05-16", "value": 725}
+      ]
+    },
+    {
+      "id": "hyperscaler_ig_share",
+      "name": "Hyperscaler Share of US Corp IG Index",
+      "unit": "%",
+      "theme": "ai-compute-capex",
+      "source": "Bloomberg US Corporate IG Index (META, GOOG/Alphabet, AMZN, ORCL combined)",
+      "description": "Concentration of hyperscaler debt in the broad investment-grade index. Rising = passive-bond-fund exposure to AI capex is structurally levered; an early-warning signal for credit-spread risk if AI revenue stumbles.",
+      "series": [
+        {"date": "2025-04-01", "value": 2.2},
+        {"date": "2026-04-01", "value": 4.1}
+      ]
+    },
+    {
+      "id": "huawei_ascend_yield",
+      "name": "Huawei Ascend 910C Reported Yield",
+      "unit": "%",
+      "theme": "china-tech",
+      "source": "DigiTimes / Semianalysis production-line reporting",
+      "description": "Yield = % of chips on a wafer that pass quality testing. The clearest single number for China's chip-process maturity gap vs. TSMC. Industry standard ~60%; TSMC >90%.",
+      "series": [
+        {"date": "2026-04-30", "value": 30},
+        {"date": "2026-05-08", "value": 40}
       ]
     },
     {
