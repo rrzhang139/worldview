@@ -23,7 +23,20 @@
         {"date": "2026-04-22", "value": 700},
         {"date": "2026-04-29", "value": 725},
         {"date": "2026-05-09", "value": 725},
-        {"date": "2026-05-16", "value": 725}
+        {"date": "2026-05-16", "value": 725},
+        {"date": "2026-05-23", "value": 725}
+      ]
+    },
+    {
+      "id": "nvda_quarterly_revenue",
+      "name": "NVIDIA Quarterly Revenue (Data Center segment, USD billion)",
+      "unit": "USD billion",
+      "theme": "ai-compute-capex",
+      "source": "NVIDIA quarterly 8-K",
+      "description": "The cleanest single number on AI-silicon demand. Q1 FY27 reported $81.6B total revenue (most is data center); Q2 guide $91B with zero China DC revenue assumed.",
+      "series": [
+        {"date": "2026-05-20", "value": 81.6},
+        {"date": "2026-08-20", "value": 91.0, "note": "Q2 guide"}
       ]
     },
     {
