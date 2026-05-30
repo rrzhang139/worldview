@@ -266,3 +266,13 @@ Entries that mature into stable understanding can be promoted to a permanent `gl
 
 ---
 
+## What is an S-1? What is Huawei's LogicFolding — is "data movement" just memory/HBM, getting data closest to compute, and how does that counter smaller transistors?
+
+*[2026-05-30 12:00] via chat*
+
+**Context:** W22 brief — OpenAI/SpaceX S-1 filings and Huawei's "Tau Scaling Law"/LogicFolding announcement. User asked what an S-1 is, and probed whether "data movement" means memory/HBM and how optimizing data-to-compute proximity counters losing the transistor-shrink race.
+
+**Notes:** **S-1** = SEC registration form to go public; first time audited financials (revenue, losses, burn, contracts, risk factors) become legally-liable public record — which is why "OpenAI loses $1.22/$1 rev" went from rumor to fact this week. Confidential S-1 = filed privately, details public ~15 days pre-roadshow. **LogicFolding/Tau Scaling Law** = Huawei's *branding* for an architectural strategy (not a fab breakthrough): get performance from 3D layout + shorter data paths instead of smaller transistors (which need EUV they can't buy). **Data movement** = a *hierarchy* of distances, of which HBM is one tier: on-chip (logic↔SRAM cache, mm), chip↔HBM memory (cm), chip↔chip (NVLink, m). User's "readability of data closest to computing" intuition = correct; the unifying goal is getting data physically closer to compute. **Why it counters smaller transistors:** transistor-shrink improves *compute throughput*; data movement improves *feeding the compute*. For AI, the compute engine is already **starving** — GPUs can do more math than they can get data for ("memory wall," memory-bandwidth-bound; same idea as the Vera Rubin inference question). So a 3nm chip still out-computes 7nm, but its size advantage is *partly wasted* if it can't be fed. Huawei's bet: lose the compute lever (no EUV), attack the memory/movement lever (packaging, interconnect, own HBM) where export controls give less handicap, and claw back *usable* performance. Caveat: claim with no shipped silicon — needs a tapeout + benchmark. The West is climbing the same memory wall (HBM4, CoWoS-L, NVL576).
+
+---
+

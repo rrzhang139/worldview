@@ -817,6 +817,41 @@
       "see_also": [
         "free cash flow"
       ]
+    },
+    "memory wall": {
+      "definition": "The growing gap between how fast a chip can compute and how fast it can be fed data from memory. Modern AI accelerators can do far more math per second than they can stream weights/activations in, so the expensive compute units sit idle waiting on memory — making workloads 'memory-bandwidth-bound' rather than compute-bound. This is why HBM bandwidth, on-chip cache, and interconnect matter as much as raw FLOPs.",
+      "theme": "semiconductors",
+      "see_also": [
+        "hbm",
+        "data movement",
+        "logicfolding"
+      ]
+    },
+    "data movement": {
+      "definition": "The cost (time + energy) of getting data to where computation happens, across a hierarchy of distances: on-chip (logic↔SRAM cache), chip↔HBM memory, and chip↔chip (NVLink/interconnect). For AI chips, data movement — not transistor count — is increasingly the binding constraint, because the compute is starved for data (see memory wall). Optimizing it means shorter paths, more cache, faster memory, and tighter packaging.",
+      "theme": "semiconductors",
+      "see_also": [
+        "memory wall",
+        "hbm",
+        "logicfolding"
+      ]
+    },
+    "logicfolding": {
+      "definition": "Huawei's brand name (paired with its 'Tau Scaling Law' framing) for an architectural strategy announced May 2026: chase performance via 3D layout and shorter on-chip data paths rather than shrinking transistors — the lever China can't pull without EUV lithography. The bet is that since leading-edge AI chips are bottlenecked on data movement anyway, attacking that axis can claw back usable performance despite a transistor-size disadvantage. A claim, not yet demonstrated in shipped silicon.",
+      "theme": "china-tech",
+      "see_also": [
+        "data movement",
+        "memory wall",
+        "tau scaling law"
+      ]
+    },
+    "tau scaling law": {
+      "definition": "Huawei's proposed framing (May 2026) that chip performance should be measured by how fast data moves within the chip (τ = time-to-move-data) rather than by transistor feature size. It's a narrative reframing of the performance leaderboard onto an axis where US export controls (EUV) give China less of a handicap. Marketing/strategy positioning, not an established physical law.",
+      "theme": "china-tech",
+      "see_also": [
+        "logicfolding",
+        "data movement"
+      ]
     }
   }
 }
