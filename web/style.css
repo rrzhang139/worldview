@@ -542,3 +542,94 @@ body {
   padding: 1px 5px;
   border-radius: 3px;
 }
+
+/* ---------------- Mobile ---------------- */
+
+/* Hamburger toggle + scrim are desktop-hidden by default */
+#menu-toggle,
+#scrim { display: none; }
+
+@media (max-width: 768px) {
+  html, body { height: auto; }
+
+  body {
+    display: block;
+    height: auto;
+    min-height: 100%;
+    overflow: visible;
+  }
+
+  /* Hamburger button, fixed top-left */
+  #menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 10px;
+    left: 12px;
+    z-index: 1400;
+    width: 42px;
+    height: 42px;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  /* Sidebar becomes an off-canvas drawer */
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 270px;
+    max-width: 84vw;
+    z-index: 1500;
+    transform: translateX(-100%);
+    transition: transform 0.22s ease;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.55);
+  }
+
+  body.nav-open #sidebar { transform: translateX(0); }
+
+  body.nav-open #scrim {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1450;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Content flows in normal document scroll, full width */
+  #content {
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+    overflow: visible;
+    padding: 64px 18px 48px;
+  }
+
+  #content article {
+    font-size: 16px;
+    line-height: 1.65;
+    overflow-wrap: break-word;
+  }
+
+  #content h1 { font-size: 21px; }
+  #content h2 { font-size: 13px; margin-top: 26px; }
+  #content h3 { margin-top: 16px; }
+  #content ul, #content ol { padding-left: 20px; }
+  #content a { overflow-wrap: anywhere; }
+
+  /* Single-column cards */
+  .home-pillars { grid-template-columns: 1fr; gap: 12px; }
+
+  /* Tooltip + toast must fit the viewport */
+  .def-tip { width: calc(100vw - 24px); max-width: 360px; }
+  .toast { max-width: calc(100vw - 24px); }
+
+  .metric-chart-wrapper { height: 160px; }
+}

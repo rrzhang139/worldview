@@ -24,7 +24,8 @@
         {"date": "2026-04-29", "value": 725},
         {"date": "2026-05-09", "value": 725},
         {"date": "2026-05-16", "value": 725},
-        {"date": "2026-05-23", "value": 725}
+        {"date": "2026-05-23", "value": 725},
+        {"date": "2026-05-30", "value": 725}
       ]
     },
     {
@@ -79,7 +80,11 @@
       "theme": "ai-compute-capex",
       "source": "NASDAQ: NVDA close",
       "description": "Fastest-moving single signal for AI capex demand expectations — if the cycle cracks, NVDA prices it first.",
-      "series": []
+      "series": [
+        {"date": "2026-05-14", "value": 235.74, "note": "all-time high close"},
+        {"date": "2026-05-18", "value": 227.49},
+        {"date": "2026-05-29", "value": 216.24, "note": "post-print fade; -8% off ATH"}
+      ]
     },
     {
       "id": "frontier_model_compute",

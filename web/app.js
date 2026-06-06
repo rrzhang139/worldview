@@ -120,6 +120,10 @@ function setContent(html) {
   const el = document.getElementById("content");
   el.innerHTML = html;
   annotateGlossaryTerms(el);
+  // Navigating closes the mobile drawer and resets scroll to the top.
+  document.body.classList.remove("nav-open");
+  el.scrollTop = 0;
+  window.scrollTo(0, 0);
 }
 
 function chartConfig(m, idPrefix) {
@@ -301,6 +305,21 @@ document.querySelectorAll(".nav-btn").forEach(btn => {
   };
 });
 
+// ---------------- Mobile nav drawer toggle ----------------
+
+const menuToggle = document.getElementById("menu-toggle");
+const scrim = document.getElementById("scrim");
+
+function setNavOpen(open) {
+  document.body.classList.toggle("nav-open", open);
+  menuToggle?.setAttribute("aria-expanded", String(open));
+}
+
+menuToggle?.addEventListener("click", () => {
+  setNavOpen(!document.body.classList.contains("nav-open"));
+});
+scrim?.addEventListener("click", () => setNavOpen(false));
+
 // ---------------- Glossary lookup + Add to learning queue on highlight ----------------
 
 let glossary = { entries: {} };
@@ -397,7 +416,7 @@ function showDefTip(rect, term, entry) {
 }
 
 function positionDefTip(tip, rect) {
-  const tipW = 360;
+  const tipW = tip.offsetWidth || 360;
   const margin = 10;
   let left = window.scrollX + rect.left + rect.width / 2 - tipW / 2;
   left = Math.max(margin, Math.min(left, window.scrollX + window.innerWidth - tipW - margin));
@@ -494,6 +513,7 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     hideAddBtn();
     closeDefTip();
+    setNavOpen(false);
   }
 });
 
