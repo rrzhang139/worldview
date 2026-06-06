@@ -226,6 +226,16 @@ Entries that mature into stable understanding can be promoted to a permanent `gl
 
 ---
 
+## NVDA $91B — is that Q2 alone or year-to-date from Jan 1?
+
+*[2026-05-23 14:00] via chat*
+
+**Context:** W21 brief described NVDA's Q2 FY27 guide as $91B with zero China DC revenue. User asked whether $91B was cumulative (Jan 1 to now) or a single-period number.
+
+**Notes:** $91B is **one quarter** — Q2 FY27, roughly May–July 2026 (three months). NVDA's fiscal year is non-calendar: FY27 = Feb 2026 → Jan 2027, so Q1 FY27 = Feb–Apr, Q2 = May–Jul, etc. Concrete anchors: $91B/quarter ≈ $1B/day; annualizes to ~$364B (Apple's entire global FY24 revenue level); NVDA's full FY24 (Feb 2023–Jan 2024) was $60.9B — they're now doing more in one quarter than they did in a full year just two years ago. The QoQ growth from Q1 $81.6B to Q2 $91B (+$13B in 3 months) is itself larger than NVDA's Q3 FY24 entire-business revenue (~$11B). Management's "zero China DC revenue assumed" makes $91B conservative — if even partial H200 deliveries close, the actual print could exceed $93–95B. The structural takeaway: NVDA is so demand-saturated that even writing China out of the base case still yields +$13B QoQ growth, which is the cleanest evidence that supply, not demand, is the binding variable through 2026–27.
+
+---
+
 ## What's contributing to Vera Rubin's 10× lower inference cost? HBM, L2 cache, continuous batching — what are the main levers? And will we see capability gains?
 
 *[2026-05-16 13:30] via chat*

@@ -472,6 +472,16 @@
       "definition": "Nvidia's proprietary high-bandwidth GPU-to-GPU interconnect, much faster than PCIe or InfiniBand. The NVLink 'domain' is the cluster of GPUs that can talk at NVLink speed: Blackwell GB200 NVL72 = 72 GPUs; Rubin Ultra NVL576 = 576 GPUs. Large NVLink domains are essential for tensor and expert parallelism — they let a single training or inference job span many GPUs without interconnect being the bottleneck.",
       "theme": "semiconductors",
       "see_also": ["vera rubin", "moe", "cowos"]
+    },
+    "fiscal year": {
+      "definition": "A company's 12-month accounting year, which often doesn't align with the calendar year. NVDA's fiscal year ends late January (FY27 = Feb 2026–Jan 2027); Microsoft ends in June; Apple ends in late September. Always check the fiscal-year convention before comparing 'Q1' across companies — NVDA's Q1 FY27 (Feb–Apr 2026) is a different time period than Microsoft's Q1 FY27 (Jul–Sep 2026).",
+      "theme": "capital-markets",
+      "see_also": ["quarterly guide"]
+    },
+    "quarterly guide": {
+      "definition": "The company's forecast of next quarter's revenue (and sometimes margin, opex, capex), provided on the current quarter's earnings call. Wall Street trades the *delta between guide and consensus* more than the actual print. NVDA's Q2 FY27 guide of $91B is the dollar revenue management expects in the 3-month May–July 2026 window — not year-to-date. A guide is non-binding but companies that miss their own guide tend to get punished severely.",
+      "theme": "capital-markets",
+      "see_also": ["fiscal year", "sep"]
     }
   }
 }
