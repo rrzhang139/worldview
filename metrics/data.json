@@ -87,6 +87,21 @@
       ]
     },
     {
+      "id": "frontier_lab_valuations",
+      "name": "Frontier US AI Lab Valuations (private/IPO mark)",
+      "unit": "USD billion",
+      "theme": "tech-investments",
+      "source": "Series rounds, S-1 filings, IPO pricing",
+      "description": "Combined frontier US AI lab valuations as they cross into public markets. All three (OpenAI, Anthropic, SpaceX/xAI) filed within 10 days in late May / early June 2026.",
+      "series": [
+        {"date": "2026-05-20", "value": 1750, "note": "SpaceX S-1 filing target"},
+        {"date": "2026-05-22", "value": 900, "note": "OpenAI S-1 filing (~$852B-$1T range, midpoint)"},
+        {"date": "2026-05-28", "value": 965, "note": "Anthropic Series H close"},
+        {"date": "2026-06-01", "value": 1000, "note": "Anthropic S-1 filing target"},
+        {"date": "2026-06-03", "value": 1770, "note": "SpaceX IPO fixed $135 = $1.77T"}
+      ]
+    },
+    {
       "id": "frontier_model_compute",
       "name": "Largest Training Run (estimated FLOPs)",
       "unit": "log10(FLOPs)",
