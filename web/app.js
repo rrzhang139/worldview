@@ -350,9 +350,12 @@ function lookupGlossary(text) {
   return glossary.entries[key] || null;
 }
 
+const IS_LOCAL =
+  location.hostname === "localhost" || location.hostname === "127.0.0.1";
+
 const addBtn = document.createElement("button");
 addBtn.id = "add-btn";
-addBtn.textContent = "+ Add";
+addBtn.textContent = IS_LOCAL ? "+ Add" : "Ask Claude";
 addBtn.style.display = "none";
 document.body.appendChild(addBtn);
 
@@ -375,13 +378,10 @@ function hideAddBtn() {
   addBtn.style.display = "none";
 }
 
-const ADD_BTN_ENABLED =
-  location.hostname === "localhost" || location.hostname === "127.0.0.1";
-
 function showAddBtn(rect) {
-  if (!ADD_BTN_ENABLED) return;
   addBtn.style.top = `${window.scrollY + rect.top - 36}px`;
-  addBtn.style.left = `${window.scrollX + rect.left + rect.width / 2 - 28}px`;
+  addBtn.style.left = `${window.scrollX + rect.left + rect.width / 2}px`;
+  addBtn.style.transform = "translateX(-50%)";
   addBtn.style.display = "block";
 }
 
@@ -477,6 +477,16 @@ addBtn.addEventListener("click", async () => {
   const context = lastSelectionContext;
   const rect = lastSelectionRect;
   hideAddBtn();
+
+  if (!IS_LOCAL) {
+    const prompt =
+      `In the context of my worldview brief, what does "${term}" mean?\n\n` +
+      `Surrounding context:\n${context}`;
+    const url = `https://claude.ai/new?q=${encodeURIComponent(prompt)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+    return;
+  }
+
   try {
     const res = await fetch("/api/add", {
       method: "POST",
