@@ -57,6 +57,12 @@
   ],
   "briefs": [
     {
+      "id": "2026-W28-brief",
+      "file": "briefs/2026-W28-brief.md",
+      "week": "2026-W28",
+      "date_range": "2026-06-13 to 2026-07-09"
+    },
+    {
       "id": "2026-W24-brief",
       "file": "briefs/2026-W24-brief.md",
       "week": "2026-W24",
