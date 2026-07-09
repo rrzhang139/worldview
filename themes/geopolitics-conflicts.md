@@ -22,3 +22,8 @@ The arc of geopolitics determines whether globalization continues to deepen or f
 - ↔ `china-tech.md` — Taiwan and chips.
 - ↔ `commodities.md` — oil shocks from Middle East, grain from Black Sea.
 - ↔ `dollar-reserves.md` — sanctions stress reserve currency.
+
+## Log
+
+- 2026-06-23: **PLA carrier Fujian (China's newest, most capable carrier) transits the Taiwan Strait** — the first such transit since April — one day after Taiwan began a five-day combat-readiness exercise simulating a Chinese invasion. — Baseline coercive-signaling data point, not an escalation trigger (no reported shift in invasion-timeline assessments); logged to establish a comparison baseline for future transits.
+- 2026-06-18: **Trump holds up a pending $14B Taiwan arms sale as explicit leverage in China talks**, calling it a "very good bargaining chip" following the May Trump-Xi summit; Taiwan President Lai says (June 18) he hopes for approval "as soon as possible" and trusts Trump to follow through. — First log entry for this theme: the first clear instance of a US administration openly conditioning a Taiwan arms package on a bilateral US-China deal rather than treating it as a standing commitment — a real test of whether "strategic ambiguity" is shifting toward transactional linkage. Directly bears on TSMC-dependency risk (cross-ref `china-tech.md`, `semiconductors.md`) and reads cleanly through the 1900-1914 lens: alliance commitments becoming negotiable chips is exactly the multipolar-reversion pattern this theme's mental model predicts.

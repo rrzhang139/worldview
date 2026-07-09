@@ -22,3 +22,9 @@ Free-market efficiency optimizes for one variable: lowest cost. National securit
 - ↔ `china-tech.md` — the bilateral other side of export controls.
 - ↔ `commodities.md` — critical minerals onshoring.
 - ↔ `geopolitics-conflicts.md` — defense readiness.
+
+## Log
+
+- 2026-07-03/04: **India clears ISM 2.0 (~$13B, up from ~$9B in phase 1)**, explicitly broadening scope from fab subsidies alone to equipment, materials, and indigenous IP; PM Modi inaugurates the CG Semi OSAT facility in Sanand, Gujarat the next day. — First log entry for this theme. A genuine structural signal, not subsidy capture: the scope expansion upstream (equipment/materials/IP) plus an actual *operating* facility — not just an award announcement — is a real capacity data point for "Make in India."
+- 2026-06-17: **Coherent breaks ground on a photonics (InP) fab expansion in Sherman, TX**, tied to AI-datacenter demand and backed by a $50M CHIPS Act award (NVIDIA present at the ceremony), aiming to quadruple wafer capacity. — Small-dollar but concrete: actual construction start, directly demand-linked to AI infrastructure rather than speculative subsidy capture — the kind of instance this theme's question is designed to detect.
+- 2026-06-03: **EU unveils "Chips Act 2.0"** — proposes letting the European Commission invest directly in cross-border fab projects (beyond its prior state-aid-coordinator role), plus new "Demand Accelerators" linking chipmakers to industrial buyers and a 12-month permitting cap. — A direct policy response to the "subsidy capture without demand" failure mode this theme's question names explicitly — worth tracking whether direct EU equity + demand-side measures actually change fab-siting decisions, or remain aspirational through the legislative process.
