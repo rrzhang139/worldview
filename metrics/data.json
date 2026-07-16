@@ -10,7 +10,8 @@
       "series": [
         {"date": "2026-03-31", "value": 35.1},
         {"date": "2026-04-30", "value": 17.5},
-        {"date": "2026-05-31", "value": 30.1, "note": "all-time monthly record NT$416.98B"}
+        {"date": "2026-05-31", "value": 30.1, "note": "all-time monthly record NT$416.98B"},
+        {"date": "2026-07-16", "value": 36.0, "note": "Q2 2026 earnings: $40.2B revenue; FY26 capex guide raised to $60-64B"}
       ]
     },
     {
@@ -87,7 +88,8 @@
         {"date": "2026-05-29", "value": 216.24, "note": "post-print fade; -8% off ATH"},
         {"date": "2026-06-12", "value": 208.61, "note": "-7% on the week; SPCX IPO capital rotation"},
         {"date": "2026-06-23", "value": 200.0, "note": "lost the $200 level"},
-        {"date": "2026-07-08", "value": 195.6, "note": "approx, derived from reported ~-17% off May ATH; Kyber NVL144 2028-slip rumor denied by NVDA"}
+        {"date": "2026-07-08", "value": 195.6, "note": "approx, derived from reported ~-17% off May ATH; Kyber NVL144 2028-slip rumor denied by NVDA"},
+        {"date": "2026-07-14", "value": 211.8, "note": "AI-rally + TSMC/ASML earnings read-through; still below $235.74 May ATH"}
       ]
     },
     {
