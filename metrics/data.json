@@ -90,7 +90,8 @@
         {"date": "2026-06-23", "value": 200.0, "note": "lost the $200 level"},
         {"date": "2026-07-08", "value": 195.6, "note": "approx, derived from reported ~-17% off May ATH; Kyber NVL144 2028-slip rumor denied by NVDA"},
         {"date": "2026-07-14", "value": 211.8, "note": "AI-rally + TSMC/ASML earnings read-through; still below $235.74 May ATH"},
-        {"date": "2026-07-22", "value": 210.87, "note": "flat on the week; Alphabet capex-raise selloff did not spill over into NVDA"}
+        {"date": "2026-07-22", "value": 210.87, "note": "flat on the week; Alphabet capex-raise selloff did not spill over into NVDA"},
+        {"date": "2026-07-29", "value": 190.01, "note": "-3.55% on the day; MSFT/Meta earnings-day capex reaction spilled into NVDA this time"}
       ]
     },
     {
@@ -109,7 +110,8 @@
         {"date": "2026-06-12", "value": 2100, "note": "SPCX Day 1 close $161 = >$2T market cap"},
         {"date": "2026-06-16", "value": 2940, "note": "SPCX ATH close $225.64, implied ~$2.94T"},
         {"date": "2026-07-08", "value": 1940, "note": "SPCX $148.30 close, round-tripped to near-IPO level"},
-        {"date": "2026-07-20", "value": 1571, "note": "SPCX $119.85 close, first close below the $135 IPO price"}
+        {"date": "2026-07-20", "value": 1571, "note": "SPCX $119.85 close, first close below the $135 IPO price"},
+        {"date": "2026-07-29", "value": 1476, "note": "SPCX $112.55 close, sliding further ahead of the Aug 6 lockup expiry (~911.5M shares, ~$116-123B unlock)"}
       ]
     },
     {
