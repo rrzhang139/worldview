@@ -91,7 +91,8 @@
         {"date": "2026-07-08", "value": 195.6, "note": "approx, derived from reported ~-17% off May ATH; Kyber NVL144 2028-slip rumor denied by NVDA"},
         {"date": "2026-07-14", "value": 211.8, "note": "AI-rally + TSMC/ASML earnings read-through; still below $235.74 May ATH"},
         {"date": "2026-07-22", "value": 210.87, "note": "flat on the week; Alphabet capex-raise selloff did not spill over into NVDA"},
-        {"date": "2026-07-29", "value": 190.01, "note": "-3.55% on the day; MSFT/Meta earnings-day capex reaction spilled into NVDA this time"}
+        {"date": "2026-07-29", "value": 190.01, "note": "-3.55% on the day; MSFT/Meta earnings-day capex reaction spilled into NVDA this time"},
+        {"date": "2026-08-05", "value": 219.22, "note": "+3.7% to a two-month high on the SpaceX compute-supply deal announcement"}
       ]
     },
     {
@@ -111,7 +112,8 @@
         {"date": "2026-06-16", "value": 2940, "note": "SPCX ATH close $225.64, implied ~$2.94T"},
         {"date": "2026-07-08", "value": 1940, "note": "SPCX $148.30 close, round-tripped to near-IPO level"},
         {"date": "2026-07-20", "value": 1571, "note": "SPCX $119.85 close, first close below the $135 IPO price"},
-        {"date": "2026-07-29", "value": 1476, "note": "SPCX $112.55 close, sliding further ahead of the Aug 6 lockup expiry (~911.5M shares, ~$116-123B unlock)"}
+        {"date": "2026-07-29", "value": 1476, "note": "SPCX $112.55 close, sliding further ahead of the Aug 6 lockup expiry (~911.5M shares, ~$116-123B unlock)"},
+        {"date": "2026-08-06", "value": 1350, "note": "SPCX falls ~7% intraday toward $110-125 as the lockup unlocks ~911.5M insider shares, despite a same-day NVDA compute-supply deal announcement"}
       ]
     },
     {
@@ -133,6 +135,31 @@
       "series": [
         {"date": "2025-12-31", "value": 45},
         {"date": "2026-04-01", "value": 50}
+      ]
+    },
+    {
+      "id": "oracle_cds_5y",
+      "name": "Oracle 5-Year CDS Spread",
+      "unit": "bps",
+      "theme": "ai-compute-capex",
+      "source": "CDS market pricing (via Bloomberg/Advisor Perspectives reporting)",
+      "description": "The concrete test case for the hyperscaler IG-concentration mind-changer: does credit-market stress show up before an AI-revenue stumble does? Currently idiosyncratic to Oracle (BBB-, most levered of the five hyperscalers) rather than sector-wide.",
+      "series": [
+        {"date": "2025-06-30", "value": 50, "note": "approx, pre-AI-capex-debt-surge baseline"},
+        {"date": "2026-01-01", "value": 144},
+        {"date": "2026-08-03", "value": 215, "note": "record high; other 4 hyperscalers' spreads remain flat near the AA index"}
+      ]
+    },
+    {
+      "id": "dram_spot_price_yoy",
+      "name": "DRAM Spot Price YoY Change",
+      "unit": "%",
+      "theme": "semiconductors",
+      "source": "Bloomberg / TrendForce spot pricing reports",
+      "description": "The memory-shortage read-through to hyperscaler capex costs: HBM's ~3:1 wafer-conversion pull on DDR4/5 capacity is now showing up as a hyperscaler capex-guidance driver, not just a component story.",
+      "series": [
+        {"date": "2025-09-01", "value": 0, "note": "baseline, pre-surge"},
+        {"date": "2026-07-01", "value": 700, "note": "Bloomberg-reported YoY spot price increase; DDR5 spot quadrupled since Sept 2025"}
       ]
     },
     {
