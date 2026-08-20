@@ -8,11 +8,29 @@
       "source": "TSMC quarterly earnings",
       "description": "Leading indicator on AI silicon demand; proxy for whether the capex cycle is real.",
       "series": [
-        {"date": "2026-03-31", "value": 35.1},
-        {"date": "2026-04-30", "value": 17.5},
-        {"date": "2026-05-31", "value": 30.1, "note": "all-time monthly record NT$416.98B"},
-        {"date": "2026-07-16", "value": 36.0, "note": "Q2 2026 earnings: $40.2B revenue; FY26 capex guide raised to $60-64B"},
-        {"date": "2026-08-10", "value": 44.7, "note": "July 2026 monthly revenue NT$467.58B, new record; YTD +37.0%, ahead of 40% FY26 guide"}
+        {
+          "date": "2026-03-31",
+          "value": 35.1
+        },
+        {
+          "date": "2026-04-30",
+          "value": 17.5
+        },
+        {
+          "date": "2026-05-31",
+          "value": 30.1,
+          "note": "all-time monthly record NT$416.98B"
+        },
+        {
+          "date": "2026-07-16",
+          "value": 36.0,
+          "note": "Q2 2026 earnings: $40.2B revenue; FY26 capex guide raised to $60-64B"
+        },
+        {
+          "date": "2026-08-10",
+          "value": 44.7,
+          "note": "July 2026 monthly revenue NT$467.58B, new record; YTD +37.0%, ahead of 40% FY26 guide"
+        }
       ]
     },
     {
@@ -23,12 +41,30 @@
       "source": "MSFT+GOOG+META+AMZN combined guidance from quarterly earnings",
       "description": "The central number for the AI arms race. Rising = bull cycle intact; guidance cuts = regime shift.",
       "series": [
-        {"date": "2026-04-22", "value": 700},
-        {"date": "2026-04-29", "value": 725},
-        {"date": "2026-05-09", "value": 725},
-        {"date": "2026-05-16", "value": 725},
-        {"date": "2026-05-23", "value": 725},
-        {"date": "2026-05-30", "value": 725}
+        {
+          "date": "2026-04-22",
+          "value": 700
+        },
+        {
+          "date": "2026-04-29",
+          "value": 725
+        },
+        {
+          "date": "2026-05-09",
+          "value": 725
+        },
+        {
+          "date": "2026-05-16",
+          "value": 725
+        },
+        {
+          "date": "2026-05-23",
+          "value": 725
+        },
+        {
+          "date": "2026-05-30",
+          "value": 725
+        }
       ]
     },
     {
@@ -39,8 +75,15 @@
       "source": "NVIDIA quarterly 8-K",
       "description": "The cleanest single number on AI-silicon demand. Q1 FY27 reported $81.6B total revenue (most is data center); Q2 guide $91B with zero China DC revenue assumed.",
       "series": [
-        {"date": "2026-05-20", "value": 81.6},
-        {"date": "2026-08-20", "value": 91.0, "note": "Q2 guide"}
+        {
+          "date": "2026-05-20",
+          "value": 81.6
+        },
+        {
+          "date": "2026-08-20",
+          "value": 91.0,
+          "note": "Q2 guide"
+        }
       ]
     },
     {
@@ -51,8 +94,14 @@
       "source": "Bloomberg US Corporate IG Index (META, GOOG/Alphabet, AMZN, ORCL combined)",
       "description": "Concentration of hyperscaler debt in the broad investment-grade index. Rising = passive-bond-fund exposure to AI capex is structurally levered; an early-warning signal for credit-spread risk if AI revenue stumbles.",
       "series": [
-        {"date": "2025-04-01", "value": 2.2},
-        {"date": "2026-04-01", "value": 4.1}
+        {
+          "date": "2025-04-01",
+          "value": 2.2
+        },
+        {
+          "date": "2026-04-01",
+          "value": 4.1
+        }
       ]
     },
     {
@@ -63,8 +112,14 @@
       "source": "DigiTimes / Semianalysis production-line reporting",
       "description": "Yield = % of chips on a wafer that pass quality testing. The clearest single number for China's chip-process maturity gap vs. TSMC. Industry standard ~60%; TSMC >90%.",
       "series": [
-        {"date": "2026-04-30", "value": 30},
-        {"date": "2026-05-08", "value": 40}
+        {
+          "date": "2026-04-30",
+          "value": 30
+        },
+        {
+          "date": "2026-05-08",
+          "value": 40
+        }
       ]
     },
     {
@@ -84,17 +139,65 @@
       "source": "NASDAQ: NVDA close",
       "description": "Fastest-moving single signal for AI capex demand expectations — if the cycle cracks, NVDA prices it first.",
       "series": [
-        {"date": "2026-05-14", "value": 235.74, "note": "all-time high close"},
-        {"date": "2026-05-18", "value": 227.49},
-        {"date": "2026-05-29", "value": 216.24, "note": "post-print fade; -8% off ATH"},
-        {"date": "2026-06-12", "value": 208.61, "note": "-7% on the week; SPCX IPO capital rotation"},
-        {"date": "2026-06-23", "value": 200.0, "note": "lost the $200 level"},
-        {"date": "2026-07-08", "value": 195.6, "note": "approx, derived from reported ~-17% off May ATH; Kyber NVL144 2028-slip rumor denied by NVDA"},
-        {"date": "2026-07-14", "value": 211.8, "note": "AI-rally + TSMC/ASML earnings read-through; still below $235.74 May ATH"},
-        {"date": "2026-07-22", "value": 210.87, "note": "flat on the week; Alphabet capex-raise selloff did not spill over into NVDA"},
-        {"date": "2026-07-29", "value": 190.01, "note": "-3.55% on the day; MSFT/Meta earnings-day capex reaction spilled into NVDA this time"},
-        {"date": "2026-08-05", "value": 219.22, "note": "+3.7% to a two-month high on the SpaceX compute-supply deal announcement"},
-        {"date": "2026-08-12", "value": 224.09, "note": "modest gain; muted reaction to Nvidia's $500B AI-financing platform announcement"}
+        {
+          "date": "2026-05-14",
+          "value": 235.74,
+          "note": "all-time high close"
+        },
+        {
+          "date": "2026-05-18",
+          "value": 227.49
+        },
+        {
+          "date": "2026-05-29",
+          "value": 216.24,
+          "note": "post-print fade; -8% off ATH"
+        },
+        {
+          "date": "2026-06-12",
+          "value": 208.61,
+          "note": "-7% on the week; SPCX IPO capital rotation"
+        },
+        {
+          "date": "2026-06-23",
+          "value": 200.0,
+          "note": "lost the $200 level"
+        },
+        {
+          "date": "2026-07-08",
+          "value": 195.6,
+          "note": "approx, derived from reported ~-17% off May ATH; Kyber NVL144 2028-slip rumor denied by NVDA"
+        },
+        {
+          "date": "2026-07-14",
+          "value": 211.8,
+          "note": "AI-rally + TSMC/ASML earnings read-through; still below $235.74 May ATH"
+        },
+        {
+          "date": "2026-07-22",
+          "value": 210.87,
+          "note": "flat on the week; Alphabet capex-raise selloff did not spill over into NVDA"
+        },
+        {
+          "date": "2026-07-29",
+          "value": 190.01,
+          "note": "-3.55% on the day; MSFT/Meta earnings-day capex reaction spilled into NVDA this time"
+        },
+        {
+          "date": "2026-08-05",
+          "value": 219.22,
+          "note": "+3.7% to a two-month high on the SpaceX compute-supply deal announcement"
+        },
+        {
+          "date": "2026-08-12",
+          "value": 224.09,
+          "note": "modest gain; muted reaction to Nvidia's $500B AI-financing platform announcement"
+        },
+        {
+          "date": "2026-08-19",
+          "value": 217.56,
+          "note": "-2.9% on the week; drawdown concentrated in the Aug 18 rates-driven selloff (30Y UST 5.32%), not a demand signal. Q2 FY27 earnings Aug 26."
+        }
       ]
     },
     {
@@ -105,18 +208,71 @@
       "source": "Series rounds, S-1 filings, IPO pricing",
       "description": "Combined frontier US AI lab valuations as they cross into public markets. All three (OpenAI, Anthropic, SpaceX/xAI) filed within 10 days in late May / early June 2026.",
       "series": [
-        {"date": "2026-05-20", "value": 1750, "note": "SpaceX S-1 filing target"},
-        {"date": "2026-05-22", "value": 900, "note": "OpenAI S-1 filing (~$852B-$1T range, midpoint)"},
-        {"date": "2026-05-28", "value": 965, "note": "Anthropic Series H close"},
-        {"date": "2026-06-01", "value": 1000, "note": "Anthropic S-1 filing target"},
-        {"date": "2026-06-03", "value": 1770, "note": "SpaceX IPO fixed $135 = $1.77T"},
-        {"date": "2026-06-12", "value": 2100, "note": "SPCX Day 1 close $161 = >$2T market cap"},
-        {"date": "2026-06-16", "value": 2940, "note": "SPCX ATH close $225.64, implied ~$2.94T"},
-        {"date": "2026-07-08", "value": 1940, "note": "SPCX $148.30 close, round-tripped to near-IPO level"},
-        {"date": "2026-07-20", "value": 1571, "note": "SPCX $119.85 close, first close below the $135 IPO price"},
-        {"date": "2026-07-29", "value": 1476, "note": "SPCX $112.55 close, sliding further ahead of the Aug 6 lockup expiry (~911.5M shares, ~$116-123B unlock)"},
-        {"date": "2026-08-06", "value": 1350, "note": "SPCX falls ~7% intraday toward $110-125 as the lockup unlocks ~911.5M insider shares, despite a same-day NVDA compute-supply deal announcement"},
-        {"date": "2026-08-10", "value": 1770, "note": "SPCX closes back above its $135 IPO price for the first time since mid-July, after a Q2 revenue beat ($7.81B vs $6.93B expected)"}
+        {
+          "date": "2026-05-20",
+          "value": 1750,
+          "note": "SpaceX S-1 filing target"
+        },
+        {
+          "date": "2026-05-22",
+          "value": 900,
+          "note": "OpenAI S-1 filing (~$852B-$1T range, midpoint)"
+        },
+        {
+          "date": "2026-05-28",
+          "value": 965,
+          "note": "Anthropic Series H close"
+        },
+        {
+          "date": "2026-06-01",
+          "value": 1000,
+          "note": "Anthropic S-1 filing target"
+        },
+        {
+          "date": "2026-06-03",
+          "value": 1770,
+          "note": "SpaceX IPO fixed $135 = $1.77T"
+        },
+        {
+          "date": "2026-06-12",
+          "value": 2100,
+          "note": "SPCX Day 1 close $161 = >$2T market cap"
+        },
+        {
+          "date": "2026-06-16",
+          "value": 2940,
+          "note": "SPCX ATH close $225.64, implied ~$2.94T"
+        },
+        {
+          "date": "2026-07-08",
+          "value": 1940,
+          "note": "SPCX $148.30 close, round-tripped to near-IPO level"
+        },
+        {
+          "date": "2026-07-20",
+          "value": 1571,
+          "note": "SPCX $119.85 close, first close below the $135 IPO price"
+        },
+        {
+          "date": "2026-07-29",
+          "value": 1476,
+          "note": "SPCX $112.55 close, sliding further ahead of the Aug 6 lockup expiry (~911.5M shares, ~$116-123B unlock)"
+        },
+        {
+          "date": "2026-08-06",
+          "value": 1350,
+          "note": "SPCX falls ~7% intraday toward $110-125 as the lockup unlocks ~911.5M insider shares, despite a same-day NVDA compute-supply deal announcement"
+        },
+        {
+          "date": "2026-08-10",
+          "value": 1770,
+          "note": "SPCX closes back above its $135 IPO price for the first time since mid-July, after a Q2 revenue beat ($7.81B vs $6.93B expected)"
+        },
+        {
+          "date": "2026-08-20",
+          "value": 1830,
+          "note": "SPCX $139.65, holding above the $135 IPO price. Separately Anthropic's October IPO is now targeted at ~$2T, which would exceed SpaceX's $1.77T June listing as the largest ever."
+        }
       ]
     },
     {
@@ -136,8 +292,14 @@
       "source": "Semianalysis / TrendForce quarterly",
       "description": "SMIC's wafer-starts-per-month for 7nm-and-below. The clearest single metric for China's chip manufacturing independence progress.",
       "series": [
-        {"date": "2025-12-31", "value": 45},
-        {"date": "2026-04-01", "value": 50}
+        {
+          "date": "2025-12-31",
+          "value": 45
+        },
+        {
+          "date": "2026-04-01",
+          "value": 50
+        }
       ]
     },
     {
@@ -148,9 +310,20 @@
       "source": "CDS market pricing (via Bloomberg/Advisor Perspectives reporting)",
       "description": "The concrete test case for the hyperscaler IG-concentration mind-changer: does credit-market stress show up before an AI-revenue stumble does? Currently idiosyncratic to Oracle (BBB-, most levered of the five hyperscalers) rather than sector-wide.",
       "series": [
-        {"date": "2025-06-30", "value": 50, "note": "approx, pre-AI-capex-debt-surge baseline"},
-        {"date": "2026-01-01", "value": 144},
-        {"date": "2026-08-03", "value": 215, "note": "record high; other 4 hyperscalers' spreads remain flat near the AA index"}
+        {
+          "date": "2025-06-30",
+          "value": 50,
+          "note": "approx, pre-AI-capex-debt-surge baseline"
+        },
+        {
+          "date": "2026-01-01",
+          "value": 144
+        },
+        {
+          "date": "2026-08-03",
+          "value": 215,
+          "note": "record high; other 4 hyperscalers' spreads remain flat near the AA index"
+        }
       ]
     },
     {
@@ -161,7 +334,11 @@
       "source": "CDS market pricing (via press reporting)",
       "description": "Second AI-infra name (after Oracle) with observable credit-market stress. ~50% implied default probability is the most extreme credit-stress reading in AI infra this cycle, even as CoreWeave's contracted backlog keeps growing — a direct split-signal test for the capex-sustainability question.",
       "series": [
-        {"date": "2026-07-25", "value": 855, "note": "~50% implied default probability; contracted backlog grew $29.6B in ~6 weeks to $129B over the same period"}
+        {
+          "date": "2026-07-25",
+          "value": 855,
+          "note": "~50% implied default probability; contracted backlog grew $29.6B in ~6 weeks to $129B over the same period"
+        }
       ]
     },
     {
@@ -172,8 +349,21 @@
       "source": "Bloomberg / TrendForce spot pricing reports",
       "description": "The memory-shortage read-through to hyperscaler capex costs: HBM's ~3:1 wafer-conversion pull on DDR4/5 capacity is now showing up as a hyperscaler capex-guidance driver, not just a component story.",
       "series": [
-        {"date": "2025-09-01", "value": 0, "note": "baseline, pre-surge"},
-        {"date": "2026-07-01", "value": 700, "note": "Bloomberg-reported YoY spot price increase; DDR5 spot quadrupled since Sept 2025"}
+        {
+          "date": "2025-09-01",
+          "value": 0,
+          "note": "baseline, pre-surge"
+        },
+        {
+          "date": "2026-07-01",
+          "value": 700,
+          "note": "Bloomberg-reported YoY spot price increase; DDR5 spot quadrupled since Sept 2025"
+        },
+        {
+          "date": "2026-08-17",
+          "value": 390,
+          "note": "German DDR5 retail price index ~4.9x year-ago (approx +390% YoY); 3Q26 server DRAM contract prices guided +13-18% QoQ, moderating from 1Q26's +90-95% and 2Q's +58-63%. Rate of increase decelerating, level still rising."
+        }
       ]
     },
     {
@@ -184,8 +374,44 @@
       "source": "IEA / Lawrence Berkeley National Lab annual report",
       "description": "Total electricity consumption by US data centers. The binding-constraint signal for AI buildout; rising sharply from 2024 AI surge.",
       "series": [
-        {"date": "2023-12-31", "value": 176},
-        {"date": "2024-12-31", "value": 260}
+        {
+          "date": "2023-12-31",
+          "value": 176
+        },
+        {
+          "date": "2024-12-31",
+          "value": 260
+        }
+      ]
+    },
+    {
+      "id": "ust_30y_yield",
+      "name": "30-Year US Treasury Yield",
+      "unit": "%",
+      "theme": "ai-compute-capex",
+      "source": "US Treasury / market close",
+      "description": "Added 2026-W34. The long end became a direct transmission channel into AI capex this week: the Aug 18 AI-infra selloff had no AI-demand news in it, only a 30Y print and an off-balance-sheet accounting story. Contingent, long-dated, levered AI commitments are duration exposure, so this is the rate that reprices them.",
+      "series": [
+        {
+          "date": "2026-08-18",
+          "value": 5.32,
+          "note": "intraday high, highest since ~2007; closed ~5.29%. A 30Y auction earlier in the month cleared at 5.216%, highest since 2001. 10Y 4.70%, easing to 4.65% Aug 19 on a Treasury long-bond buyback announcement."
+        }
+      ]
+    },
+    {
+      "id": "coreweave_price",
+      "name": "CoreWeave Share Price",
+      "unit": "USD",
+      "theme": "ai-compute-capex",
+      "source": "NASDAQ: CRWV close",
+      "description": "Added 2026-W34 as the equity companion to coreweave_cds_5y. The cleanest public readout on how the market prices the most contingent and most levered AI-infrastructure balance sheet: $35.6B total debt, $35-39B FY26 capex guide, ~$129B contracted backlog. Moves on financing cost, not on AI demand.",
+      "series": [
+        {
+          "date": "2026-08-18",
+          "value": 93.17,
+          "note": "-12.10% on the day on 36.6M shares (21% above 3-month average), on debt-financing cost and capex pressure as the 30Y hit 5.32%. No AI-demand news attached."
+        }
       ]
     }
   ]

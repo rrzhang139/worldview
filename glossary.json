@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-05-30",
+  "updated": "2026-08-20",
   "description": "Permanent term lookup. Read by web/app.js to surface instant definitions on highlight. Claude appends/updates entries when explaining terms in chat.",
   "entries": {
     "bond": {
@@ -866,6 +866,275 @@
       "see_also": [
         "fiscal year",
         "sep"
+      ]
+    },
+    "residual value guarantee": {
+      "definition": "A promise to cover the shortfall if an asset is worth less than a guaranteed minimum when a lease ends or a tenant defaults. It is contingent, not debt — it only pays out after the lender first tries to re-lease or sell the asset. Nvidia's up-to-$105B backstop on OpenAI's Ohio campus is this structure, which is why it doesn't appear as a liability on Nvidia's balance sheet.",
+      "theme": "ai-compute-capex",
+      "see_also": [
+        "off-balance-sheet",
+        "vendor financing",
+        "uncommenced lease"
+      ]
+    },
+    "off-balance-sheet": {
+      "definition": "Obligations a company has genuinely taken on but that accounting rules don't require it to book as liabilities — guarantees, leases that haven't started, purchase commitments. They're real money owed, but they don't move a debt-to-equity ratio, so leverage screens miss them. WSJ counted ~$3T of these across nine AI-exposed firms in August 2026 against ~$600B of actual capex.",
+      "theme": "ai-compute-capex",
+      "see_also": [
+        "uncommenced lease",
+        "purchase commitment",
+        "residual value guarantee",
+        "rpo"
+      ]
+    },
+    "uncommenced lease": {
+      "definition": "A signed lease for a building (usually a data center) that hasn't started yet because the facility isn't finished. Under current lease accounting it isn't recorded as a liability until the term begins, so a company can commit hundreds of billions in future rent without it showing up in reported debt. Roughly $1.2T of the ~$3T AI off-balance-sheet tally.",
+      "theme": "ai-compute-capex",
+      "see_also": [
+        "off-balance-sheet",
+        "purchase commitment"
+      ]
+    },
+    "purchase commitment": {
+      "definition": "A contractual obligation to buy a set quantity of something — chips, construction, power — in the future. Disclosed in filing footnotes rather than booked as debt. About $1.9T of the ~$3T off-balance-sheet AI total, and the main reason reported hyperscaler leverage understates true AI exposure.",
+      "theme": "ai-compute-capex",
+      "see_also": [
+        "off-balance-sheet",
+        "uncommenced lease",
+        "rpo"
+      ]
+    },
+    "vendor financing": {
+      "definition": "When a supplier helps fund its own customers' purchases — lending, guaranteeing, or taking equity so the customer can afford the product. It flatters near-term revenue but means the supplier eats the loss if demand was never real. Nvidia's $500B financing platform and $105B Ohio guarantee are the AI-cycle version; 1870s railroad-bond financing is the standard historical analogue.",
+      "theme": "ai-compute-capex",
+      "see_also": [
+        "residual value guarantee",
+        "circular financing"
+      ]
+    },
+    "circular financing": {
+      "definition": "Money moving in a loop among a small set of firms that are simultaneously each other's investors, suppliers, and customers — so the same dollar shows up as revenue in several places. In the AI cycle: hyperscalers invest in labs, labs buy hyperscaler compute, chipmakers back the data centers that buy their chips, and the valuations reinforce each other.",
+      "theme": "tech-investments",
+      "see_also": [
+        "vendor financing",
+        "residual value guarantee"
+      ]
+    },
+    "cover ratio": {
+      "definition": "How many dollars of investor orders a bond deal attracted per dollar actually sold — a 5x cover means $5B of demand for $1B of paper. It's the cleanest real-time read on appetite for a borrower. AI-linked deals fell from roughly 5x in February 2026 to under 2x by July, which is what deteriorating demand looks like before it shows up in spreads.",
+      "theme": "ai-compute-capex",
+      "see_also": [
+        "primary market",
+        "credit spread",
+        "ig"
+      ]
+    },
+    "cds": {
+      "definition": "Credit default swap — insurance against a borrower defaulting. The premium, quoted in basis points per year, is the market's live probability estimate of that default. Because CDS trades continuously while bonds sit still, it's the fastest credit-stress signal available: Oracle at ~215bps and CoreWeave at ~855bps in 2026 are the two AI names the market genuinely worries about.",
+      "theme": "ai-compute-capex",
+      "see_also": [
+        "basis points",
+        "credit spread",
+        "ig"
+      ]
+    },
+    "risk retention": {
+      "definition": "The post-2008 rule requiring a securitization's sponsor to keep ~5% of the deal on its own books, so whoever packages the loans still eats losses if they go bad. The SEC's July 2026 interpretive letter placed most data-center securitizations outside the definition of asset-backed securities, exempting them from it — which is part of why data-center securitization went from $4B in 2020 to $61B by mid-2026.",
+      "theme": "ai-compute-capex",
+      "see_also": [
+        "securitization",
+        "cmbs",
+        "off-balance-sheet"
+      ]
+    },
+    "securitization": {
+      "definition": "Bundling a pool of income-producing assets — mortgages, leases, data-center rent — into tradable bonds sold to investors. It converts illiquid contracts into liquid securities and moves the assets off the originator's balance sheet. Data-center securitization is the fastest-growing corner of AI infrastructure funding.",
+      "theme": "ai-compute-capex",
+      "see_also": [
+        "risk retention",
+        "cmbs",
+        "off-balance-sheet"
+      ]
+    },
+    "cmbs": {
+      "definition": "Commercial mortgage-backed securities — bonds backed by mortgages on commercial property. SASB (single-asset single-borrower) CMBS backed by one data center has become a standard AI-buildout funding channel, and pricing on those deals is a direct read on how the market views data-center collateral.",
+      "theme": "ai-compute-capex",
+      "see_also": [
+        "securitization",
+        "risk retention"
+      ]
+    },
+    "convertible note": {
+      "definition": "A bond that can convert into the issuer's stock at a set price, letting the borrower pay a low coupon in exchange for giving lenders equity upside. Watch for accreting structures: Nebius's August 2026 $5B deal repays 110-125% of face at maturity, so the headline 0.50% coupon badly understates the real cost.",
+      "theme": "tech-investments",
+      "see_also": [
+        "bond",
+        "coupon",
+        "equity"
+      ]
+    },
+    "rpo": {
+      "definition": "Remaining performance obligation — contracted revenue a company has signed but not yet delivered. It's the backlog number cloud and AI-infra firms lead with (Microsoft $678B, Oracle $638B, CoreWeave ~$104B in 2026). Useful as a demand signal, but it says nothing about whether the customer can actually pay or when the cash arrives.",
+      "theme": "ai-compute-capex",
+      "see_also": [
+        "purchase commitment",
+        "off-balance-sheet"
+      ]
+    },
+    "adiz": {
+      "definition": "Air defense identification zone — airspace beyond national territory where a country demands aircraft identify themselves. It has no basis in international law, so entering one isn't a violation. Taiwan's daily ADIZ entry and median-line-crossing counts are the standard quantitative measure of PLA pressure tempo.",
+      "theme": "geopolitics-conflicts",
+      "see_also": [
+        "median line"
+      ]
+    },
+    "median line": {
+      "definition": "The informal midpoint of the Taiwan Strait, treated as a de facto boundary from the 1950s until China began routinely crossing it in 2020. Crossings are counted separately from ADIZ entries in Taiwan's daily reports because they're the more escalatory signal — an ADIZ entry can be a distant transit, a median-line crossing is deliberate.",
+      "theme": "geopolitics-conflicts",
+      "see_also": [
+        "adiz"
+      ]
+    },
+    "large load": {
+      "definition": "A grid customer drawing enough power to need its own interconnection rules — FERC and PJM both draw the line at 50MW peak. Creating the category is what let regulators write data-center-specific requirements in 2026, including PJM's rule that large load not backed by new generation gets curtailed first.",
+      "theme": "energy-systems",
+      "see_also": [
+        "interconnection queue",
+        "curtailment",
+        "ppa",
+        "behind-the-meter"
+      ]
+    },
+    "curtailment": {
+      "definition": "Cutting a customer's power delivery when the grid can't serve everyone. Historically a rare emergency measure; PJM's 2026 large-load filing makes it a standing condition of service — data-center demand not backed by new generation is curtailed ahead of everything else, which turns interconnection from a queue into a conditional contract.",
+      "theme": "energy-systems",
+      "see_also": [
+        "large load",
+        "interconnection queue"
+      ]
+    },
+    "interconnection queue": {
+      "definition": "The waiting line to connect new generation or large load to the grid, processed roughly in order. PJM's stretched past eight years, which is why hyperscalers turned to behind-the-meter and direct-plant deals. The 2026 reforms attack the queue by making admitted load interruptible rather than by making the queue shorter.",
+      "theme": "energy-systems",
+      "see_also": [
+        "large load",
+        "curtailment",
+        "behind-the-meter",
+        "pjm auction shortfall"
+      ]
+    },
+    "cost causation": {
+      "definition": "The regulatory principle that whoever causes a cost on the grid should pay it, rather than spreading it across all ratepayers. It's the technical hinge of the data-center backlash: Pennsylvania's August 2026 executive order requires data centers to pay 'all costs caused in whole or in part' by their load, which is what stops residential customers cross-subsidizing hyperscalers.",
+      "theme": "energy-systems",
+      "see_also": [
+        "large load",
+        "ppa"
+      ]
+    },
+    "emib": {
+      "definition": "Embedded Multi-die Interconnect Bridge — Intel's advanced packaging approach, using small silicon bridges embedded in the substrate to link chiplets, as opposed to TSMC's CoWoS interposer. The EMIB-T variant reached ~90% yields in 2026 and became the first credible second source when CoWoS booked out.",
+      "theme": "semiconductors",
+      "see_also": [
+        "cowos",
+        "advanced packaging",
+        "reticle limit"
+      ]
+    },
+    "reticle limit": {
+      "definition": "The largest area a lithography tool can pattern in one exposure, about 858mm². Chips bigger than this must be stitched from multiple exposures or built from chiplets, so 'x-reticle' packaging (5.5x in 2026 volume production, 14x targeted by 2029) measures how much silicon can be assembled into one accelerator package.",
+      "theme": "semiconductors",
+      "see_also": [
+        "cowos",
+        "emib",
+        "advanced packaging"
+      ]
+    },
+    "wpm": {
+      "definition": "Wafers per month — the standard unit of fab capacity. Usually quoted as 12-inch (300mm) wafers or '8-inch equivalent' for comparison across tool generations. It's the number that tells you whether a fab expansion is real: SMIC added only 8,000 wpm of 12-inch capacity in Q2 2026 while running at 93.7% utilization.",
+      "theme": "semiconductors",
+      "see_also": [
+        "process node",
+        "smic"
+      ]
+    },
+    "duv": {
+      "definition": "Deep ultraviolet lithography — the 193nm-wavelength generation before EUV, still capable of ~7nm-class features through immersion and multi-patterning at higher cost. It's the ceiling China can currently reach domestically: not export-controlled the way EUV is, which makes indigenous immersion DUV the central question in whether export controls hold.",
+      "theme": "china-tech",
+      "see_also": [
+        "euv",
+        "asml",
+        "process node",
+        "multi-patterning"
+      ]
+    },
+    "multi-patterning": {
+      "definition": "Building one fine circuit layer from several coarser exposures, so an older lithography tool can print features it couldn't resolve in a single pass. It's how DUV reaches nodes that would otherwise need EUV — at the cost of more steps, lower yield, and higher price per wafer. The core technical basis of China's workaround strategy.",
+      "theme": "china-tech",
+      "see_also": [
+        "duv",
+        "euv",
+        "process node"
+      ]
+    },
+    "fd-soi": {
+      "definition": "Fully depleted silicon-on-insulator — a transistor design built on an insulating layer rather than bulk silicon, giving good power efficiency at mature nodes without needing EUV. Chinese capital has been funding it precisely because it routes around the export-controlled part of the stack instead of competing head-on.",
+      "theme": "china-tech",
+      "see_also": [
+        "euv",
+        "process node",
+        "duv"
+      ]
+    },
+    "cxmt": {
+      "definition": "ChangXin Memory Technologies — China's leading DRAM maker. It IPO'd on the STAR Market in July 2026 and became Greater China's most valuable company within 17 days, running 17nm-class DDR5 at ~90% yield with no EUV. The clearest single instance of the parallel-stack thesis working at the memory layer.",
+      "theme": "china-tech",
+      "see_also": [
+        "duv",
+        "hbm",
+        "smic",
+        "wpm"
+      ]
+    },
+    "star market": {
+      "definition": "Shanghai's Nasdaq-style board for science and technology companies, launched 2019 with looser profitability requirements than China's main boards. It's where Beijing lists its strategic-technology champions, so listings there signal state priority as much as market demand.",
+      "theme": "china-tech",
+      "see_also": [
+        "cxmt",
+        "ipo"
+      ]
+    },
+    "preparedness framework": {
+      "definition": "OpenAI's internal policy for evaluating whether a model has reached dangerous capability thresholds — tiered Low/Medium/High/Critical across cyber, bio, and other axes — with commitments to add safeguards or halt work at higher tiers. Astra was the first model any lab couldn't rule out at Critical, making 2026 the live test of whether voluntary self-governance binds when it's commercially costly.",
+      "theme": "ai-policy-regulation",
+      "see_also": [
+        "system card",
+        "compute threshold",
+        "gpai"
+      ]
+    },
+    "system card": {
+      "definition": "A technical document published alongside a model release describing its capabilities, evaluations, and known risks. It's the primary source worth reading on any frontier release — the evals section in particular, since press coverage almost never engages with it.",
+      "theme": "ai-models-economics",
+      "see_also": [
+        "preparedness framework",
+        "benchmark"
+      ]
+    },
+    "residual value": {
+      "definition": "What an asset is expected to be worth at the end of a lease or useful life. It's the crux of AI infrastructure risk: nobody knows what a five-year-old GPU cluster is worth, and whoever guarantees that number — increasingly the chipmaker itself — is absorbing the depreciation risk of the whole buildout.",
+      "theme": "ai-compute-capex",
+      "see_also": [
+        "residual value guarantee",
+        "vendor financing"
+      ]
+    },
+    "peak off-peak pricing": {
+      "definition": "Charging more for API calls during high-demand hours, standard in electricity and airlines but new to model inference. DeepSeek introduced it in August 2026 alongside price rises up to ~1,100%. Rationing by clock is a capacity signal rather than a pricing strategy — it means the provider is compute-constrained, not margin-optimizing.",
+      "theme": "ai-models-economics",
+      "see_also": [
+        "deepseek",
+        "inference-time compute",
+        "capability per dollar"
       ]
     }
   }
