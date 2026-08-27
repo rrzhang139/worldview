@@ -197,6 +197,11 @@
           "date": "2026-08-19",
           "value": 217.56,
           "note": "-2.9% on the week; drawdown concentrated in the Aug 18 rates-driven selloff (30Y UST 5.32%), not a demand signal. Q2 FY27 earnings Aug 26."
+        },
+        {
+          "date": "2026-08-26",
+          "value": 209.66,
+          "note": "pre-earnings close, roughly flat-to-down into the print; Q2 FY27 results ($96.2B rev, $108B Q3 guide, zero China assumed) released after close, shares +5.95% premarket Aug 27"
         }
       ]
     },
@@ -323,6 +328,11 @@
           "date": "2026-08-03",
           "value": 215,
           "note": "record high; other 4 hyperscalers' spreads remain flat near the AA index"
+        },
+        {
+          "date": "2026-08-24",
+          "value": 208,
+          "note": "approx midpoint of ~200-215bp reported range, 2026-W35; 18-year high, wider than Oracle's own 2008 GFC peak. S&P downgraded Oracle to BBB- on -$23.7B FY26 FCF vs ~$130B debt; MSFT/GOOG/AMZN/META CDS stayed flat near the broad AA index, confirming the stress is idiosyncratic to Oracle, not systemic"
         }
       ]
     },
@@ -396,6 +406,11 @@
           "date": "2026-08-18",
           "value": 5.32,
           "note": "intraday high, highest since ~2007; closed ~5.29%. A 30Y auction earlier in the month cleared at 5.216%, highest since 2001. 10Y 4.70%, easing to 4.65% Aug 19 on a Treasury long-bond buyback announcement."
+        },
+        {
+          "date": "2026-08-25",
+          "value": 5.20,
+          "note": "eased to ~5.17-5.26% range after Treasury Secretary Bessent doubled long-bond buyback operations from $2B to $4B per operation for 10-30Y maturities; still historically elevated vs. pre-August levels"
         }
       ]
     },
