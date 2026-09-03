@@ -202,6 +202,11 @@
           "date": "2026-08-26",
           "value": 209.66,
           "note": "pre-earnings close, roughly flat-to-down into the print; Q2 FY27 results ($96.2B rev, $108B Q3 guide, zero China assumed) released after close, shares +5.95% premarket Aug 27"
+        },
+        {
+          "date": "2026-09-02",
+          "value": 222.0,
+          "note": "approx; traded $216.07-$227.95 intraday, holding well above the pre-print $209.66 close. No new NVDA-specific catalyst this window; move consistent with broader AI-semis tone around Broadcom's Sept 2 print."
         }
       ]
     },
@@ -411,6 +416,31 @@
           "date": "2026-08-25",
           "value": 5.20,
           "note": "eased to ~5.17-5.26% range after Treasury Secretary Bessent doubled long-bond buyback operations from $2B to $4B per operation for 10-30Y maturities; still historically elevated vs. pre-August levels"
+        },
+        {
+          "date": "2026-09-02",
+          "value": 5.27,
+          "note": "roughly flat vs Aug 25 despite the Sept 1-2 US-Iran strikes and Brent's +9% weekly move; no acute rates spike yet from the new Hormuz-conflict channel"
+        }
+      ]
+    },
+    {
+      "id": "brent_crude",
+      "name": "Brent Crude Oil Price",
+      "unit": "USD/bbl",
+      "theme": "geopolitics-conflicts",
+      "source": "ICE Brent futures / market close",
+      "description": "Added 2026-W36. New live transmission channel between the Hormuz/Iran conflict and AI-infra financing costs, alongside the 30Y UST — the Sept 1-2 US-Iran strikes (first direct US strikes on Iranian tankers) repriced oil with no AI-specific news attached, the same 'macro shock bleeds into AI-adjacent assets' pattern as the Aug 18 rates selloff.",
+      "series": [
+        {
+          "date": "2026-08-20",
+          "value": 93.31,
+          "note": "Aug 20 close, +37.9% YoY, highest since Jul 24, on the expired 60-day US-Iran deadline and blockade threats"
+        },
+        {
+          "date": "2026-09-02",
+          "value": 95.63,
+          "note": "+~9% on the week; US CENTCOM struck ~100 IRGC-linked targets and two Iranian tankers (Sept 1), Iran retaliated with ~25 missiles/drones against US-linked sites in Bahrain, Kuwait, Jordan, Erbil (Sept 2). WTI $91.01."
         }
       ]
     },
