@@ -277,6 +277,11 @@
           "date": "2026-08-20",
           "value": 1830,
           "note": "SPCX $139.65, holding above the $135 IPO price. Separately Anthropic's October IPO is now targeted at ~$2T, which would exceed SpaceX's $1.77T June listing as the largest ever."
+        },
+        {
+          "date": "2026-09-13",
+          "value": 2000,
+          "note": "Anthropic selects Nasdaq for its IPO ahead of a confidential S-1, targeting a raise of up to $100B at a ~$2T valuation, priced before the Nov 2026 midterms; Nvidia reportedly in talks to invest up to $10B in the offering"
         }
       ]
     },
@@ -411,6 +416,11 @@
           "date": "2026-08-25",
           "value": 5.20,
           "note": "eased to ~5.17-5.26% range after Treasury Secretary Bessent doubled long-bond buyback operations from $2B to $4B per operation for 10-30Y maturities; still historically elevated vs. pre-August levels"
+        },
+        {
+          "date": "2026-09-16",
+          "value": 5.35,
+          "note": "held near cycle highs through the week (9/11 5.35%, 9/14 5.34%, 9/15 5.36%, 9/16 5.35%), well above the ~5.22-5.25% seen in late August; the prior week's climb has not unwound further"
         }
       ]
     },
