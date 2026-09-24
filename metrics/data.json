@@ -30,6 +30,11 @@
           "date": "2026-08-10",
           "value": 44.7,
           "note": "July 2026 monthly revenue NT$467.58B, new record; YTD +37.0%, ahead of 40% FY26 guide"
+        },
+        {
+          "date": "2026-09-10",
+          "value": 53.3,
+          "note": "August 2026 monthly revenue NT$514.81B (~US$16.35B), new record, +10.1% MoM — 4th consecutive month of growth, accelerating not just holding"
         }
       ]
     },
@@ -202,6 +207,15 @@
           "date": "2026-08-26",
           "value": 209.66,
           "note": "pre-earnings close, roughly flat-to-down into the print; Q2 FY27 results ($96.2B rev, $108B Q3 guide, zero China assumed) released after close, shares +5.95% premarket Aug 27"
+        },
+        {
+          "date": "2026-09-18",
+          "value": 222.27
+        },
+        {
+          "date": "2026-09-23",
+          "value": 223.03,
+          "note": "roughly flat on the week, but forward P/E has reportedly compressed to <17x — near a decade low — despite the Q2 beat and ~$108B Q3 guide; Jensen Huang publicly pushed back, calling NVDA \"the world's first and only growth value stock\""
         }
       ]
     },
@@ -277,6 +291,16 @@
           "date": "2026-08-20",
           "value": 1830,
           "note": "SPCX $139.65, holding above the $135 IPO price. Separately Anthropic's October IPO is now targeted at ~$2T, which would exceed SpaceX's $1.77T June listing as the largest ever."
+        },
+        {
+          "date": "2026-09-23",
+          "value": 1945,
+          "note": "SPCX $148.36 close, still above the $135 IPO price but sliding on lockup expirations, Shotwell's planned $52M share sale, and record weekly retail outflows per JPMorgan"
+        },
+        {
+          "date": "2026-09-24",
+          "value": 2000,
+          "note": "Anthropic's IPO reportedly pushed from a Sept/Oct target to November 2026, still targeting ~$2T valuation / up to $100B raised (would exceed SpaceX's $86.7B record raise). Delay attributed to wanting stronger Q3 numbers post-GPT-6-Astra and fallout from Amodei's capability-slowdown essay."
         }
       ]
     },
@@ -411,6 +435,11 @@
           "date": "2026-08-25",
           "value": 5.20,
           "note": "eased to ~5.17-5.26% range after Treasury Secretary Bessent doubled long-bond buyback operations from $2B to $4B per operation for 10-30Y maturities; still historically elevated vs. pre-August levels"
+        },
+        {
+          "date": "2026-09-24",
+          "value": 5.399,
+          "note": "reversal, not continuation, of the Aug 25 easing: touched an intraday high near 5.44% (highest since 2004) before settling ~5.399%, after the Fed hiked its target range 25bp to 3.75-4.00% on Sept 16 (first hike since 2023, aimed at inflation). 10Y hit 5.10%, highest since July 2007. Markets now price >75% odds of another October hike."
         }
       ]
     },
@@ -426,6 +455,26 @@
           "date": "2026-08-18",
           "value": 93.17,
           "note": "-12.10% on the day on 36.6M shares (21% above 3-month average), on debt-financing cost and capex pressure as the 30Y hit 5.32%. No AI-demand news attached."
+        },
+        {
+          "date": "2026-09-17",
+          "value": 79.88,
+          "note": "close ahead of the $3.7B upsized convertible-notes pricing (2.875% coupon, ~22.5% conversion premium); stock fell 5-7.6% on the announcement and is now down ~53% from its June 2025 ATH ($183.58), ~12x 2025 EBITDA despite ~101%/110% projected 2025-28 revenue/EBITDA CAGRs"
+        }
+      ]
+    },
+    {
+      "id": "korea_memory_exports_yoy",
+      "name": "South Korea Memory Chip Exports YoY",
+      "unit": "%",
+      "theme": "semiconductors",
+      "source": "Korea Customs Service",
+      "description": "Added 2026-W39. Real-time national customs data on the HBM/memory bottleneck — a hard, high-frequency confirmation of the DRAM/HBM pricing story that doesn't depend on any single supplier's disclosure.",
+      "series": [
+        {
+          "date": "2026-09-20",
+          "value": 350.7,
+          "note": "first 20 days of September: $21.5B memory exports (+350.7% YoY); total exports for the period hit a record $71.4B (+78.3% YoY), prior record $61.7B in June"
         }
       ]
     }
