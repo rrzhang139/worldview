@@ -57,6 +57,12 @@
   ],
   "briefs": [
     {
+      "id": "2026-W40-brief",
+      "file": "briefs/2026-W40-brief.md",
+      "week": "2026-W40",
+      "date_range": "2026-09-25 to 2026-10-01"
+    },
+    {
       "id": "2026-W39-brief",
       "file": "briefs/2026-W39-brief.md",
       "week": "2026-W39",
