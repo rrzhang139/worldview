@@ -34,7 +34,12 @@
         {
           "date": "2026-09-10",
           "value": 53.3,
-          "note": "August 2026 monthly revenue NT$514.81B (~US$16.35B), new record, +10.1% MoM — 4th consecutive month of growth, accelerating not just holding"
+          "note": "August 2026 monthly revenue NT$514.81B (~US$16.35B), new record, +10.1% MoM \u2014 4th consecutive month of growth, accelerating not just holding"
+        },
+        {
+          "date": "2026-10-08",
+          "value": 54.6,
+          "note": "September 2026 monthly revenue NT$511.86B, -0.6% MoM (first MoM dip after 4 months of growth), +54.6% YoY; YTD +41.1%; Q3 total ~NT$1,494B vs guide of US$44.6-45.8B (~NT$1,427-1,466B at NT$32) \u2014 above the top of guidance"
         }
       ]
     },
@@ -142,7 +147,7 @@
       "unit": "USD",
       "theme": "ai-compute-capex",
       "source": "NASDAQ: NVDA close",
-      "description": "Fastest-moving single signal for AI capex demand expectations — if the cycle cracks, NVDA prices it first.",
+      "description": "Fastest-moving single signal for AI capex demand expectations \u2014 if the cycle cracks, NVDA prices it first.",
       "series": [
         {
           "date": "2026-05-14",
@@ -215,7 +220,7 @@
         {
           "date": "2026-09-23",
           "value": 223.03,
-          "note": "roughly flat on the week, but forward P/E has reportedly compressed to <17x — near a decade low — despite the Q2 beat and ~$108B Q3 guide; Jensen Huang publicly pushed back, calling NVDA \"the world's first and only growth value stock\""
+          "note": "roughly flat on the week, but forward P/E has reportedly compressed to <17x \u2014 near a decade low \u2014 despite the Q2 beat and ~$108B Q3 guide; Jensen Huang publicly pushed back, calling NVDA \"the world's first and only growth value stock\""
         }
       ]
     },
@@ -366,7 +371,7 @@
       "unit": "bps",
       "theme": "ai-compute-capex",
       "source": "CDS market pricing (via press reporting)",
-      "description": "Second AI-infra name (after Oracle) with observable credit-market stress. ~50% implied default probability is the most extreme credit-stress reading in AI infra this cycle, even as CoreWeave's contracted backlog keeps growing — a direct split-signal test for the capex-sustainability question.",
+      "description": "Second AI-infra name (after Oracle) with observable credit-market stress. ~50% implied default probability is the most extreme credit-stress reading in AI infra this cycle, even as CoreWeave's contracted backlog keeps growing \u2014 a direct split-signal test for the capex-sustainability question.",
       "series": [
         {
           "date": "2026-07-25",
@@ -433,7 +438,7 @@
         },
         {
           "date": "2026-08-25",
-          "value": 5.20,
+          "value": 5.2,
           "note": "eased to ~5.17-5.26% range after Treasury Secretary Bessent doubled long-bond buyback operations from $2B to $4B per operation for 10-30Y maturities; still historically elevated vs. pre-August levels"
         },
         {
@@ -469,7 +474,7 @@
       "unit": "%",
       "theme": "semiconductors",
       "source": "Korea Customs Service",
-      "description": "Added 2026-W39. Real-time national customs data on the HBM/memory bottleneck — a hard, high-frequency confirmation of the DRAM/HBM pricing story that doesn't depend on any single supplier's disclosure.",
+      "description": "Added 2026-W39. Real-time national customs data on the HBM/memory bottleneck \u2014 a hard, high-frequency confirmation of the DRAM/HBM pricing story that doesn't depend on any single supplier's disclosure.",
       "series": [
         {
           "date": "2026-09-20",
